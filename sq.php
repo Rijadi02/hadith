@@ -44,12 +44,13 @@ $random = array_rand($fileList);
   <meta name="author" content="" />
   <title>Agency - SB Admin Pro</title>
   <link href="css/styles.css" rel="stylesheet" />
+  <!-- <link href="css/styles.css" rel="stylesheet" /> -->
   <link rel="stylesheet" href="css/font-awsome.min.css">
-  <link rel="stylesheet" href="css/lity.min.css" />
-  <link rel="stylesheet" href="css/aos.css" />
+  <!-- <link rel="stylesheet" href="css/lity.min.css" />
+  <link rel="stylesheet" href="css/aos.css" /> -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
   <script data-search-pseudo-elements defer src="js/all.min.js"></script>
-  <script src="js/feather.min.js"></script>
+  <!-- <script src="js/feather.min.js"></script> -->
   <link href="font/stylesheet.css" rel="stylesheet">
   <link href="css/mystyle.css" rel="stylesheet">
 
@@ -216,18 +217,18 @@ $random = array_rand($fileList);
   <div id="photoParent">
   </div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <!-- <script src="js/scripts.js"></script> -->
 
-  <script src="js/aos.js"></script>
+  <!-- <script src="js/aos.js"></script>
   <script>
     AOS.init({
       disable: 'mobile',
       duration: 600,
       once: true
     });
-  </script>
+  </script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
 
 
