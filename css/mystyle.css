@@ -1,11 +1,35 @@
 @keyframes slideInFromLeft {
   0% {
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    
+    overflow-y: hidden;
+    overflow-x: hidden; /* Hide vertical scrollbar */
+  }
+  99% {
+    overflow-y: hidden;
+    overflow-x: hidden; /* Hide vertical scrollbar */
   }
   100% {
-    overflow-y: auto; /* Hide vertical scrollbar */
+    overflow-y: auto;
+    overflow-x: auto; /* Hide vertical scrollbar */
   }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    margin-top: 4rem !important;
+    transform: translate(0,4rem);
+    position: absolute;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+    position: relative;
+  }
+}
+
+.page-header-content
+{
+  animation: 1s ease-in-out 0s 1 fade-up;
 }
 
 header {  
@@ -18,25 +42,27 @@ header {
 
 
 body {
-  animation: 2.5s ease-out 0s 1 slideInFromLeft;
+    animation: 1.5s ease-out 0s 1 slideInFromLeft;
     background-repeat: repeat-y;
     width: 100vw;
-    
-    
+
   }
 
-  .blur {
-    background-color: rgba(0, 0, 0, 0.8);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(0px);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  .overlay {
+    position: relative;
+  }
+  .overlay:before {
+    content: "";
     position: absolute;
-
-
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
   }
+  
+
 
   .a-title {
     font-family: Avenir;
@@ -155,8 +181,32 @@ body {
 
   
 
+  .bg-img-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #687281;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.35rem;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
   /* header{
                   background-repeat: repeat-y !important;
               }

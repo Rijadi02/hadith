@@ -78,7 +78,7 @@ $random = array_rand($fileList);
   </script>
 
   <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
-    <button class="btn m-0 py-3" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="width:60px;font-size: 20px; padding-top:21px!important; padding-bottom: 5px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 50px 0px 0;">
+    <button class="btn m-0 py-3" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="width:60px;font-size: 20px; padding-bottom: 10px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 50px 0px 0;">
       <i class="fa text-button fa-camera"></i>
     </button>
     <br>
@@ -88,18 +88,16 @@ $random = array_rand($fileList);
   </div>
 
 
-
-
   <form method="POST" action="" class="screenshot border-0 mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; top: 10px; left: 10px;">
-    <button class="btn m-0 " type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px; padding-bottom: 10px!important; padding-top: 15px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 0 0 50px ">
+    <button class="btn m-0 " type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px; padding-bottom: 12px!important; padding-top: 12px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 0 0 50px ">
       <i class="fa text-button fa-chevron-left"></i>
     </button>
 
-    <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="margin:0 0px;width: 60px; padding-bottom: 10px!important; padding-top: 15px!important; font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 0">
+    <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="margin:0 0px;width: 60px; padding-bottom: 12px!important; padding-top: 12px!important; font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 0">
       <i class="fa text-button fa-redo-alt"></i>
     </button>
 
-    <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; padding-bottom: 10px!important; padding-top: 15px!important; font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 0  50px 50px 0">
+    <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; padding-bottom: 12px!important; padding-top: 12px!important; font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 0  50px 50px 0">
       <i class="fa text-button fa-chevron-right"></i>
     </button>
   </form>
@@ -111,7 +109,7 @@ $random = array_rand($fileList);
             height: 100%;">
     <div id="layoutDefault_content" style="width: 100%; height: 100%;">
 
-      <div id="main" class="page-header my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $fileList[$random] ?>"); width: 100%; height: 100% !important; background-repeat: repeat-y !important;'>
+      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $fileList[$random] ?>"); width: 100%; height: 100% !important; background-repeat: repeat-y !important;'>
         <div class="blur"></div>
         <div class="page-header-content" style="min-height: 100vh;">
           <div style="z-index: 100;" class="my-container">
