@@ -384,9 +384,9 @@ $random = array_rand($fileList)
 
   <script type='text/javascript'>
     var node = document.getElementById('layoutDefault');
-    var scale = 2;
+    var scale = 3;
     function screenshot() {
-      domtoimage.toJpeg(node, {
+      domtoimage.toPng(node, {
           quality: 5,
           height: node.offsetHeight * scale,
           width: node.offsetWidth * scale,
@@ -398,7 +398,7 @@ $random = array_rand($fileList)
         })
         .then(function(dataUrl) {
           var link = document.createElement('a');
-          link.download = 'onehadith.jpg';
+          link.download = 'onehadith.png';
           link.href = dataUrl;
           link.click();
         });
