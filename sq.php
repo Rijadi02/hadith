@@ -77,7 +77,7 @@ $random = array_rand($fileList);
     }
   </script>
 
-  <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
+  <!-- <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
     <button class="btn m-0 py-3" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="width:60px;font-size: 20px; padding-bottom: 10px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 50px 0px 0;">
       <i class="fa text-button fa-camera"></i>
     </button>
@@ -100,8 +100,13 @@ $random = array_rand($fileList);
     <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; padding-bottom: 12px!important; padding-top: 12px!important; font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 0  50px 50px 0">
       <i class="fa text-button fa-chevron-right"></i>
     </button>
-  </form>
+  </form> -->
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
 
+</script>
 
 
 
@@ -118,15 +123,15 @@ $random = array_rand($fileList);
                 <div class="text-center-mobile">
 
                   <p href="#" class="transmetuesiM pb-1 pt-5 text-center">onehadith.org</p>
-                  <div class="mobileShow">
-                  <div id="photoParent1">
+                  <div class="">
+                  <div id="photoParent1" class="w-100 text-center">
 
-                    <div class="photoHide1 mobileShow">
-                      <button class="btn py-2 mobileShow" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot(true);' style="font-size: 20px; border: none">
+                    <div class="photoHide1 ">
+                      <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot(true);' style="font-size: 20px; border: none">
                         <i class="fa text-button fa-camera"></i>
                       </button>
                       |
-                      <button class="btn py-2 mobileShow" type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
+                      <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
                         <i class="fa text-button fa-clipboard"></i>
                       </button>
                     </div>
@@ -161,9 +166,14 @@ $random = array_rand($fileList);
                         <p href="#" class="libraM"><?php echo $hadith->NrHadithi ?>, <?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
                         <p href="#" class="shkallaM mb-5">[Sahih]</p>
 
-                        <div id="photoParent2">
+                        
+
+                      </p>
+                    </div>
+
+                    <div id="photoParent2">
                           <div class="photoHide2">
-                            <form method="POST" action="" class="screenshot border-0 mobileShow pt-3">
+                            <form method="POST" action="" class="screenshot border-0  pt-3">
                               <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                                 <i class="fa text-button fa-chevron-left"></i>
                               </button>
@@ -178,9 +188,6 @@ $random = array_rand($fileList);
                             </form>
                           </div>
                         </div>
-
-                      </p>
-                    </div>
 
                     <div class="py-3"></div>
 
@@ -212,7 +219,7 @@ $random = array_rand($fileList);
     </div>
   </div>
 
-  <div id="photoParent">
+  <div style="display: none;" id="photoParent">
   </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -276,7 +283,7 @@ $random = array_rand($fileList);
         })
         .then(function(dataUrl) {
           var link = document.createElement('a');
-          link.download = 'onehadith.png';
+          link.download = 'onehadith<?php echo $hadith->NrHadithi ?>.png';
           link.href = dataUrl;
           link.click();
 

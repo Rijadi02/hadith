@@ -15,12 +15,18 @@
 
 @keyframes fade-up {
   0% {
+    width: 100%;
     opacity: 0;
-    margin-top: 4rem !important;
     transform: translate(0,4rem);
     position: absolute;
   }
+
+  20% {
+    opacity: 0;
+
+  }
   100% {
+    width: 100%;
     opacity: 1;
     transform: translate(0,0);
     position: relative;
@@ -45,7 +51,7 @@ body {
     animation: 1.5s ease-out 0s 1 slideInFromLeft;
     background-repeat: repeat-y;
     width: 100vw;
-
+    background-color: #000;
   }
 
   .overlay {
@@ -55,6 +61,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
+    animation: 1.5s ease-out 0s 1 fade;
     left: 0;
     right: 0;
     bottom: 0;
@@ -62,6 +69,18 @@ body {
     opacity: 0.8;
   }
   
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    
+    100% {
+     opacity: 0.8;
+    }
+  }
 
 
   .a-title {
@@ -222,7 +241,7 @@ body {
                   }
                   } */
   .transmetuesi {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: white;
     font-weight: 300;
     opacity: 0.8;
@@ -238,7 +257,7 @@ body {
   }
 
   .hadith {
-    font-size: 24px;
+    font-size: 2rem;
     color: white;
     font-weight: 400;
     opacity: 0.9;
@@ -254,7 +273,7 @@ body {
 
 
   .shkalla {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: white;
     font-weight: 300;
     opacity: 0.8;
@@ -271,7 +290,7 @@ body {
   }
 
   .libra {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: white;
     font-weight: 300;
     opacity: 0.8;
