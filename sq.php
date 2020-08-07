@@ -43,7 +43,7 @@ $random = array_rand($fileList);
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>Agency - SB Admin Pro</title>
-  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- <link href="css/styles.css" rel="stylesheet" /> -->
   <link rel="stylesheet" href="css/font-awsome.min.css">
   <!-- <link rel="stylesheet" href="css/lity.min.css" />
@@ -117,7 +117,7 @@ $random = array_rand($fileList);
           <div style="z-index: 100;" class="my-container">
             <div class="row justify-content-center">
               <div class="col-xl-12 col-lg-12">
-                <div data-aos="fade-up" class="text-center-mobile">
+                <div class="text-center-mobile">
 
                   <p href="#" class="transmetuesiM pb-1 pt-5 text-center">onehadith.org</p>
                   <div class="mobileShow">
