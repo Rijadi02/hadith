@@ -1,9 +1,8 @@
-<?php 
+<?php
 require_once("includes/init.php");
 $hadith = Hadithet::get_random();
 
-if(isset($_GET['nr']))
-{
+if (isset($_GET['nr'])) {
   $hadith = Hadithet::find_by_nr($_GET['nr']);
 }
 
@@ -251,13 +250,13 @@ $random = array_rand($fileList)
       padding-left: 12% !important;
     }
   </style>
- 
+
 </head>
 
 <body>
 
-<script>
-   function copy() {
+  <script>
+    function copy() {
       var $temp = $("<input>");
       $("body").append($temp);
 
@@ -272,7 +271,6 @@ $random = array_rand($fileList)
       $temp.remove();
       alert("Hadith copied to clipboard!")
     }
-    
   </script>
   <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
     <button class="btn m-0 py-3" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="width:60px;font-size: 20px; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 20px 20px 0px 0;">
@@ -298,8 +296,8 @@ $random = array_rand($fileList)
                 <div data-aos="fade-up">
 
                   <p href="#" class="transmetuesiM pb-5 pt-5 text-center">onehadith.org</p>
-    
-                  
+
+
 
                   <div class="center-hadith" style="min-height: 80vh;display: flex;
                 align-items: center;
@@ -386,19 +384,29 @@ $random = array_rand($fileList)
 
   <script type='text/javascript'>
     var node = document.getElementById('layoutDefault');
-
+    var scale = 2;
     function screenshot() {
-      domtoimage.toJpeg(node, { quality: 1 })
-    .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'onehadith.jpg';
-        link.href = dataUrl;
-        link.click();
-    });}
+      domtoimage.toJpeg(node, {
+          quality: 5,
+          height: node.offsetHeight * scale,
+          width: node.offsetWidth * scale,
+          style: {
+          transform: "scale(" + scale + ")",
+          transformOrigin: "top left",
+          width: node.offsetWidth + "px",
+          height: node.offsetHeight + "px"}
+        })
+        .then(function(dataUrl) {
+          var link = document.createElement('a');
+          link.download = 'onehadith.jpg';
+          link.href = dataUrl;
+          link.click();
+        });
+    }
   </script>
 
 
-  
+
 </body>
 
 </html>
