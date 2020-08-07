@@ -30,7 +30,7 @@ class Hadithet extends Db_object
 
     public static function get_random()
     {   
-        $the_result_array = self::find_by_query("SELECT * FROM " . self::$db_table . " ORDER BY RAND() LIMIT 1;");
+        $the_result_array = self::find_by_query("SELECT * FROM " . self::$db_table . " WHERE LENGTH(Hadithi) < 1400 ORDER BY RAND() LIMIT 1;");
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
     }
 

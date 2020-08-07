@@ -290,6 +290,15 @@
     <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
+    <script src="js/aos.js"></script>
+  <script>
+    AOS.init({
+      disable: 'mobile',
+      duration: 600,
+      once: true
+    });
+  </script>
+
     <script>
         AOS.init({
             disable: 'mobile',
