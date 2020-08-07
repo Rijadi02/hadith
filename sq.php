@@ -109,7 +109,7 @@ $random = array_rand($fileList);
             height: 100%;">
     <div id="layoutDefault_content" style="width: 100%; height: 100%;">
 
-      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $fileList[$random] ?>"); width: 100%; height: 100% !important; background-repeat: repeat-y !important;'>
+      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $fileList[$random] ?>"); width: 100%; height: 100% !important;'>
         <div class="blur"></div>
         <div class="page-header-content" style="min-height: 100vh;">
           <div style="z-index: 100;" class="my-container">
