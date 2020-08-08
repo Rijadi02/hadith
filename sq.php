@@ -101,12 +101,11 @@ $random = array_rand($fileList);
       <i class="fa text-button fa-chevron-right"></i>
     </button>
   </form> -->
-<script>
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
-
-</script>
+  <script>
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+  </script>
 
 
 
@@ -123,11 +122,15 @@ if ( window.history.replaceState ) {
                 <div class="text-center-mobile">
 
                   <p href="#" class="transmetuesiM pb-1 pt-5 text-center">onehadith.org</p>
-                  <div class="">
-                  <div id="photoParent1" class="w-100 text-center">
 
-                    <div class="photoHide1 ">
-                      <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot(true);' style="font-size: 20px; border: none">
+                  <div id="pParent-1" class="w-100 text-center">
+                    
+                    <button class="btn py-2 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
+                    &nbsp;
+                    </button>
+
+                    <div id="pHide-1">
+                      <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
                         <i class="fa text-button fa-camera"></i>
                       </button>
                       |
@@ -137,15 +140,15 @@ if ( window.history.replaceState ) {
                     </div>
 
                   </div>
-                </div>
+
 
                   <div class="center-hadith" id="center-hadith" style="min-height: 84vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
-                    <div class="mobileHide">
+                    <div class="mobileHide pb-5">
 
-                      <p class="page-header-title">
+                      <p class="page-header-title pb-4">
 
                         <p href="#" id="transmetuesi" class="transmetuesi"><?php echo narr_format($hadith->Transmetimi) ?></p>
                         <p href="#" id="hadith" class="hadith"><?php echo narr_format($hadith->Hadithi) ?></p>
@@ -166,28 +169,43 @@ if ( window.history.replaceState ) {
                         <p href="#" class="libraM"><?php echo $hadith->NrHadithi ?>, <?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
                         <p href="#" class="shkallaM mb-5">[Sahih]</p>
 
-                        
-
                       </p>
                     </div>
 
-                    <div id="photoParent2">
-                          <div class="photoHide2">
-                            <form method="POST" action="" class="screenshot border-0  pt-3">
-                              <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
-                                <i class="fa text-button fa-chevron-left"></i>
-                              </button>
-                              |
-                              <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
-                                <i class="fa text-button fa-redo-alt"></i>
-                              </button>
-                              |
-                              <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
-                                <i class="fa text-button fa-chevron-right"></i>
-                              </button>
-                            </form>
-                          </div>
-                        </div>
+                    <div id="pParent-2">
+                      <div id="pHide-2" class="mobileHide pb-4" style="position: absolute; bottom:0%; transform: translate(-50%,0)">
+                        <form method="POST" action="" class="screenshot border-0  pt-3">
+                          <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
+                            <i class="fa text-button fa-chevron-left"></i>
+                          </button>
+                          <span style="padding: 10px 0 0 0;">|</span>
+                          <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
+                            <i class="fa text-button fa-redo-alt"></i>
+                          </button>
+                          <span style="padding: 10px 0 0 0;">|</span>
+                          <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
+                            <i class="fa text-button fa-chevron-right"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                    <div id="pParent-3">
+                      <div id="pHide-3" class="mobileShow">
+                        <form method="POST" action="" class="screenshot border-0  pt-3">
+                          <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
+                            <i class="fa text-button fa-chevron-left"></i>
+                          </button>
+                          <span style="padding: 10px 0 0 0;">|</span>
+                          <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
+                            <i class="fa text-button fa-redo-alt"></i>
+                          </button>
+                          <span style="padding: 10px 0 0 0;">|</span>
+                          <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
+                            <i class="fa text-button fa-chevron-right"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
 
                     <div class="py-3"></div>
 
@@ -219,7 +237,7 @@ if ( window.history.replaceState ) {
     </div>
   </div>
 
-  <div style="display: none;" id="photoParent">
+  <div style="display: none;" id="pParent">
   </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -242,33 +260,25 @@ if ( window.history.replaceState ) {
 
 
   <script type='text/javascript' defer>
-
     function screenshot(center = false) {
 
       var node = document.getElementById('layoutDefault');
       var scale = 2;
-    
-      var photoHide1 = document.getElementsByClassName("photoHide1");
-      var photoHide2 = document.getElementsByClassName("photoHide2");
 
-      var photoParent = document.getElementById("photoParent");
+      var photoHideNumber = 3;
+      var photoParent = document.getElementById("pParent");
 
-      var photoParent1 = document.getElementById("photoParent1");
-      var photoParent2 = document.getElementById("photoParent2");
-
-      for (var i = 0; i < photoHide1.length; i++) {
-        photoParent.appendChild(photoHide1[i])
+      for (var i = 1; i <= photoHideNumber; i++) {
+        var photo = document.getElementById("pHide-" + i.toString());
+        photoParent.appendChild(photo)
       }
+      document.getElementById("dummy_hide").style.display = "block";
+      
+      // if (center) {
+      //   var ch = document.getElementById("center-hadith");
 
-      for (var i = 0; i < photoHide2.length; i++) {
-        photoParent.appendChild(photoHide2[i])
-      }
-
-      if (center) {
-        var ch = document.getElementById("center-hadith");
-
-        ch.style.minHeight = "88vh"
-      }
+      //   ch.style.minHeight = "88vh"
+      // }
 
       domtoimage.toPng(node, {
           quality: 5,
@@ -287,20 +297,16 @@ if ( window.history.replaceState ) {
           link.href = dataUrl;
           link.click();
 
-          
-          for (var i = 0; i < photoHide2.length; i++) {
-            photoParent2.appendChild(photoHide2[i])
+          document.getElementById("dummy_hide").style.display = "none";
+
+          for (var i = 1; i <= photoHideNumber; i++) {
+            var photo = document.getElementById("pHide-" + i.toString());
+            document.getElementById("pParent-" + i.toString()).appendChild(photo);
           }
 
-          for (var i = 0; i < photoHide1.length; i++) {
-            photoParent1.appendChild(photoHide1[i])
-          }
-
-
-
-          if (center) {
-            ch.style.minHeight = "84vh"
-          }
+          // if (center) {
+          //   ch.style.minHeight = "84vh"
+          // }
         });
     }
   </script>

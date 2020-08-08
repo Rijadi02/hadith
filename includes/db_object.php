@@ -114,7 +114,7 @@ class Db_object{
         return $clean_properties;
 	}
 
-	public function save($id)
+	public function save($id = null)
     {
         return isset($id) ? $this->update($id) : $this->create();
     }
