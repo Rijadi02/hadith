@@ -1,3 +1,5 @@
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+
 <?php
 require_once("includes/init.php");
 $hadith = Hadithet::get_random();
@@ -23,41 +25,16 @@ if (isset($_POST['back']) or isset($_POST['next'])) {
 // $_SESSION['i'] = -1;
 // $_SESSION['page'] = [];
 
+// $_SESSION['x'] = $_SESSION['x'] + 1;
+// $fileList = glob('images/new_n/new_2/'.$_SESSION['x']+".jpg");
 
-$fileList = glob('images/*');
+
+$fileList = glob('images/new_n/*');
 $random = array_rand($fileList);
-
-// print_r( $_SESSION['page']);
-// echo "<br>";
-// echo $_SESSION['page'][$_SESSION['i']];
+$img = $fileList[$random]
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <script src="js/dom-to-image.min.js"></script>
-  <script scr="js/FileSaver.js"></script>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Agency - SB Admin Pro</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <!-- <link href="css/styles.css" rel="stylesheet" /> -->
-  <link rel="stylesheet" href="css/font-awsome.min.css">
-  <!-- <link rel="stylesheet" href="css/lity.min.css" />
-  <link rel="stylesheet" href="css/aos.css" /> -->
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-  <script data-search-pseudo-elements defer src="js/all.min.js"></script>
-  <!-- <script src="js/feather.min.js"></script> -->
-  <link href="font/stylesheet.css" rel="stylesheet">
-  <link href="css/mystyle.css" rel="stylesheet">
 
 
-</head>
-
-<body>
 
   <script>
     function copy() {
@@ -101,6 +78,7 @@ $random = array_rand($fileList);
       <i class="fa text-button fa-chevron-right"></i>
     </button>
   </form> -->
+  
   <script>
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
@@ -113,20 +91,20 @@ $random = array_rand($fileList);
             height: 100%;">
     <div id="layoutDefault_content" style="width: 100%; height: 100%;">
 
-      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $fileList[$random] ?>"); width: 100%; height: 100% !important;'>
+      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; height: 100% !important;'>
         <div class="blur"></div>
-        <div class="page-header-content" style="min-height: 100vh;">
+        <div class="page-header-content fade-up" style="min-height: 100vh;">
           <div style="z-index: 100;" class="my-container">
             <div class="row justify-content-center">
               <div class="col-xl-12 col-lg-12">
                 <div class="text-center-mobile">
 
-                  <p href="#" class="transmetuesiM pb-1 pt-5 text-center">onehadith.org</p>
+                <p href="/" class="transmetuesiM pb-1 pt-5 text-center"><a href="." class="text-decoration-none"> onehadith.org </a></p>
 
                   <div id="pParent-1" class="w-100 text-center">
-                    
+
                     <button class="btn py-2 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
-                    &nbsp;
+                      &nbsp;
                     </button>
 
                     <div id="pHide-1">
@@ -142,7 +120,7 @@ $random = array_rand($fileList);
                   </div>
 
 
-                  <div class="center-hadith" id="center-hadith" style="min-height: 84vh;display: flex;
+                  <div class="center-hadith" id="center-hadith" style="min-height: 80vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
@@ -166,7 +144,8 @@ $random = array_rand($fileList);
                         <p href="#" class="transmetuesiM mt-4"><?php echo narr_format($hadith->Transmetimi) ?></p>
                         <p href="#" class="hadithM"><?php echo narr_format($hadith->Hadithi) ?> </p>
 
-                        <p href="#" class="libraM"><?php echo $hadith->NrHadithi ?>, <?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
+                        <p href="#" class="libraM">
+                          <!--<?php echo $hadith->NrHadithi ?>, --><?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
                         <p href="#" class="shkallaM mb-5">[Sahih]</p>
 
                       </p>
@@ -240,24 +219,6 @@ $random = array_rand($fileList);
   <div style="display: none;" id="pParent">
   </div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="js/scripts.js"></script> -->
-
-  <!-- <script src="js/aos.js"></script>
-  <script>
-    AOS.init({
-      disable: 'mobile',
-      duration: 600,
-      once: true
-    });
-  </script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
-
-
-
-
-
 
   <script type='text/javascript' defer>
     function screenshot(center = false) {
@@ -273,7 +234,7 @@ $random = array_rand($fileList);
         photoParent.appendChild(photo)
       }
       document.getElementById("dummy_hide").style.display = "block";
-      
+
       // if (center) {
       //   var ch = document.getElementById("center-hadith");
 
@@ -312,7 +273,4 @@ $random = array_rand($fileList);
   </script>
 
 
-
-</body>
-
-</html>
+<?php require_once("includes/foot.php") ?>

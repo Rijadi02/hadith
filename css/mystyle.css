@@ -15,10 +15,9 @@
 
 @keyframes fade-up {
   0% {
-    width: 100%;
+    width: 100vw;
     opacity: 0;
     transform: translate(0,4rem);
-    position: absolute;
   }
 
   20% {
@@ -26,17 +25,37 @@
 
   }
   100% {
-    width: 100%;
+    width: 100vw;
     opacity: 1;
     transform: translate(0,0);
-    position: relative;
   }
 }
 
-.page-header-content
-{
-  animation: 1s ease-in-out 0s 1 fade-up;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
+.fade-up
+{
+  animation: 1s ease-in-out 0s 1 fade-up !important;
+}
+
+.fade-in
+{
+  animation: 1s ease-in-out 0s 1 fade-in !important;
+}
+
+
 
 header {  
   /* This section calls the slideInFromLeft animation we defined above */
@@ -86,6 +105,7 @@ body {
   .a-title {
     font-family: Avenir;
     font-weight: 300;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
   }
 
   .a-title:hover {
@@ -330,3 +350,51 @@ body {
   {
     color: rgba(255, 255, 255, 0.8);
   }
+
+
+  .message
+  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    background-color: #000;
+    opacity: 0.9;
+    -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  -o-backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+  z-index: 1000;
+  }
+
+  .message-text
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5rem;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      display: block!important;
+    }
+  
+    100% {
+      opacity: 0;
+      display: none!important;
+    }
+  }
+  .message-fade-out
+  {
+    animation: 1s ease-in-out 0s 1 fade-out !important;
+    display: none !important;
+  }
+  
+  

@@ -39,4 +39,11 @@ function numberToRoman($num)
 
     return $result; 
 }
-?>
+
+
+function message($my_msg, $my_msg_type = "success")
+{
+    global $msg , $msg_type;
+    $msg = $my_msg;
+    $msg_type = $my_msg_type;
+}
