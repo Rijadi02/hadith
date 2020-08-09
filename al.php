@@ -4,8 +4,12 @@
 require_once("includes/init.php");
 $hadith = Hadithet::get_random();
 
-if (isset($_GET['nr'])) {
-  $hadith = Hadithet::find_by_nr($_GET['nr']);
+if (isset($_POST['nr'])) {
+  $hadith = Hadithet::find_by_nr($_POST['nr']);
+}
+
+if (isset($_POST['id'])) {
+  $hadith = Hadithet::find_by_id($_POST['id']);
 }
 
 if (isset($_POST['back']) or isset($_POST['next'])) {

@@ -25,5 +25,15 @@
 
 <body>
 
+<?php if(count($_GET) > 0): ?>
+<form action="<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>" style="display: none;" method="POST" id="get_to_post">
+  <?php foreach ($_GET as $key => $value) : ?>
+    <input type="hidden" name="<?php echo $key?>" value="<?php echo $value ?>">
+  <?php endforeach; ?>
+</form>
 
+<script>
+  document.getElementById("get_to_post").submit();
+</script>
+<?php endif; ?>
     
