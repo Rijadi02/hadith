@@ -88,11 +88,10 @@ $img = $fileList[$random]
 
 
   <div id="layoutDefault" style="width: 100%;
-            height: 100%;">
-    <div id="layoutDefault_content" style="width: 100%; height: 100%;">
+            min-height: 100%;">
+    <div id="layoutDefault_content" style="width: 100%; min-height: 100%;">
 
-      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; height: 100% !important;'>
-        <div class="blur"></div>
+      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; min-height: 100% !important;'>
         <div class="page-header-content fade-up" style="min-height: 100vh;">
           <div style="z-index: 100;" class="my-container">
             <div class="row justify-content-center">

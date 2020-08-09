@@ -71,6 +71,7 @@ body {
     background-repeat: repeat-y;
     width: 100vw;
     background-color: #000;
+    min-height: 100%;
   }
 
   .overlay {
