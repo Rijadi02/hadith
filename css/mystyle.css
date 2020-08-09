@@ -117,6 +117,15 @@ body {
 
   }
 
+  .a-mobile:active
+  {
+    color: black;
+    background-color: white;
+    padding: 20px 20px;
+  }
+
+
+
   a {
     color: white;
   }

@@ -4,7 +4,7 @@
 class Hadithet extends Db_object
 {
     protected static $db_table = "hadithet";
-    protected static $db_table_fields = array('id', 'IDKapitulli' ,'NrHadithi', 'Transmetimi', 'Hadithi', 'IDFusnota', 'NrHadithiPerseritje', 'Zgjedhur', 'Lexuar', 'KomentTjeter', 'Kudsij');
+    protected static $db_table_fields = array('id', 'IDKapitulli' ,'NrHadithi', 'Transmetimi', 'Hadithi', 'IDFusnota', 'NrHadithiPerseritje', 'Zgjedhur', 'Lexuar', 'KomentTjeter', 'Kudsij', 'Shkalla');
     
     public $id;
     public $IDKapitulli;
@@ -16,7 +16,8 @@ class Hadithet extends Db_object
     public $Zgjedhur;
     public $Lexuar;
     public $KomentTjeter;
-    public $Kuds;
+    public $Kudsij;
+    public $Shkalla;
 
     public function get_chapter()
     {

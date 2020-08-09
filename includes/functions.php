@@ -47,3 +47,9 @@ function message($my_msg, $my_msg_type = "success")
     $msg = $my_msg;
     $msg_type = $my_msg_type;
 }
+
+function redirect($page)
+{
+  header('location:' . $page . '');
+  exit;
+}

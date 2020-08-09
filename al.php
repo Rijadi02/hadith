@@ -128,9 +128,9 @@ $img = $fileList[$random]
                       <p class="page-header-title pb-4">
 
                         <p href="#" id="transmetuesi" class="transmetuesi"><?php echo narr_format($hadith->Transmetimi) ?></p>
-                        <p href="#" id="hadith" class="hadith"><?php echo narr_format($hadith->Hadithi) ?></p>
+                        <p href="#" id="hadith" class="hadith" ><?php echo narr_format($hadith->Hadithi) ?></p>
                         <div>
-                          <p href="#" id="shkalla" class="shkalla">[Sahih]</p>
+                          <p href="#" id="shkalla" class="shkalla"><?php echo $hadith->Shkalla ?></p>
                           <p href="#" id="libra" class="libra"> <?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
                         </div>
                       </p>
@@ -145,7 +145,7 @@ $img = $fileList[$random]
 
                         <p href="#" class="libraM">
                           <!--<?php echo $hadith->NrHadithi ?>, --><?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
-                        <p href="#" class="shkallaM mb-5">[Sahih]</p>
+                        <p href="#" class="shkallaM mb-5"><?php echo $hadith->Shkalla ?></p>
 
                       </p>
                     </div>

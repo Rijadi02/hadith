@@ -35,13 +35,26 @@ if (isset($_POST['submit-email'])) {
                             <div data-aos="fade-up">
                                 <div class="row pt-5">
 
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 mobileShow">
                                         <p class="page-header-text">If you want to get a hadeeth per day in you email, put your email down there!</p>
                                         <div id="WRAPPER">
                                             <form class="border-0" action="" method="POST" style="display: inline;">
                                                 <div class="term">
-                                                    <input name="email" type="text" id="email" placeholder="Email here!" style=" border-bottom: 1px solid white">
-                                                    <button id="button-transparent" type="submit" name="submit-email" style=" border-bottom: 1px solid white"><i class="fa fa-arrow-right"></i></button>
+                                                    <input name="email" type="email" required id="email" placeholder="Email here!" style="width:80%;border-bottom: 1px solid white">
+                                                    <button id="button-transparent" type="submit" name="submit-email" style="border-bottom: 1px solid white"><i class="fa fa-arrow-right"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 mobileHide">
+                                        <p class="page-header-text">If you want to get a hadeeth per day in you email, put your email down there!</p>
+                                        <div id="WRAPPER">
+                                            <form class="border-0" action="" method="POST" style="display: inline;">
+                                                <div class="term">
+                                                    <input name="email" type="email" required id="email" placeholder="Email here!" style="border-bottom: 1px solid white">
+                                                    <button id="button-transparent" type="submit" name="submit-email" style="border-bottom: 1px solid white"><i class="fa fa-arrow-right"></i></button>
                                                 </div>
                                             </form>
                                         </div>
@@ -55,12 +68,12 @@ if (isset($_POST['submit-email'])) {
 
 
                                 <p class="page-header-title mobileHide" style="padding: 20vh 0;">
-                                    <a href="sq" class="a-title">Albanian</a> &nbsp;
+                                    <a href="al" class="a-title">Albanian</a> &nbsp;
                                     |
                                     &nbsp;
-                                    <a href="#" class="a-title">English</a> &nbsp;
+                                    <a href="en" class="a-title">English</a> &nbsp;
                                     |
-                                    &nbsp; <a href="#" class="a-title">Arabic</a>
+                                    &nbsp; <a href="ar" class="a-title">Arabic</a>
 
                                 </p>
 
@@ -69,22 +82,18 @@ if (isset($_POST['submit-email'])) {
                                 <div class="mobileShow" class="h-100">
                                     <div class="py-5">
                                         <div class="py-5">
-                                            <h1 class="page-header-title  text-center ">
-                                                <a href="#" class="a-title text-decoration-none" style="padding: 15px 40px !important;
-                                                    border: 2px solid #fff;
-                                                    border-radius: 100px;">Albanian</a>
+                                            <h1 class="page-header-title text-center">
+                                                <a href="al" class="a-mobile text-center text-decoration-none">Albanian</a>
                                                 <br>
-                                                <br>
-
-                                                <a href="#" class="a-title text-decoration-none" style="padding: 15px 40px !important;
-                                                    border: 2px solid #fff;
-                                                    border-radius: 100px;">English</a>
-                                                <br>
+                                                -
                                                 <br>
 
-                                                <a href="#" class="a-title text-decoration-none" style="width: 300px;padding: 15px 40px !important;
-                                                    border: 2px solid #fff;
-                                                    border-radius: 100px;">Arabic</a>
+                                                <a href="en" class="a-mobile text-center text-decoration-none">English</a>
+                                                <br>
+                                                -
+                                                <br>
+
+                                                <a href="ar" class="a-mobile text-center text-decoration-none">Arabic</a>
 
                                             </h1>
 
