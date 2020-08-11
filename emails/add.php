@@ -1,5 +1,15 @@
 <?php 
-include("../includes/init.php");
+
+require_once "../includes/config.php";
+require_once "../includes/database.php";
+require_once "../includes/functions.php";
+require_once "../includes/db_object.php";
+
+require_once "../includes/librat.php";
+require_once "../includes/kapitujt.php";
+require_once "../includes/hadithet.php";
+require_once "../includes/email_list.php";
+require_once "../includes/email.php";
 
 
 if(isset($_POST['submit']))
