@@ -12,6 +12,6 @@ require_once "kapitujt.php";
 require_once "hadithet.php";
 
 
-require_once "head.php";
+// require_once "head.php";
 
 ?>
