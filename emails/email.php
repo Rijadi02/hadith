@@ -1,6 +1,17 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-include("../includes/init.php");
+
+require_once "../includes/config.php";
+require_once "../includes/database.php";
+require_once "../includes/functions.php";
+require_once "../includes/db_object.php";
+
+require_once "../includes/librat.php";
+require_once "../includes/kapitujt.php";
+require_once "../includes/hadithet.php";
+require_once "../includes/email_list.php";
+require_once "../includes/email.php";
+
 require '../vendor/autoload.php';
 
 function send_email($email, $hadith)
