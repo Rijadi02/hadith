@@ -10,26 +10,6 @@
         font-weight: normal;
         font-style: normal;
     }
-        .mobileShow {
-            display: none;
-        }
-
-        .mobileHide {
-            display: block;
-        }
-
-        /* Smartphone Portrait and Landscape */
-        @media only screen and (min-device-width : 120px) and (max-device-width : 480px) {
-            .mobileShow {
-                display: inline;
-            }
-
-            .mobileHide {
-                display: none;
-            }
-        }
-
-    
 </style>
 <div style="padding: 20px;font-family: Avenir;" class="mobileHide">
     <div style="font-size: 1rem;">
@@ -39,9 +19,7 @@
         <a style="text-decoration: none; color: black;" href="hadithe.tachyondev.tech/al?id=%hadith_id%"><b>%hadith%</b></a>
     </div>
     <div style="font-size: 1rem;">
-        <p>%chapter%, %book%
-            <span style="float: right; padding: 20px 0;">
-                %grade%</span>
+        <p>%chapter%, %book%<span style="float: right; padding: 20px 0;">%grade%</span>
         </p>
     </div>
 </div>
