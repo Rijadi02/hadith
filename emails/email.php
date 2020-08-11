@@ -17,6 +17,7 @@ function send_email($email, $hadith)
     $mail->addAddress($email);
     $mail->Subject = 'Daily Hadith';
     
+    
     $message = file_get_contents(dirname(__FILE__).'/email.html');
     $message = str_replace('%hadith_id%', $hadith->id , $message);
     $message = str_replace('%transmetimi%', narr_format($hadith->Transmetimi), $message);
@@ -26,6 +27,8 @@ function send_email($email, $hadith)
     $message = str_replace('%grade%', $hadith->Shkalla , $message);
 
     $mail->msgHTML($message);
+    $mail->isHTML(true);
+    
     if (!$mail->send()) {
         return 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
@@ -33,8 +36,13 @@ function send_email($email, $hadith)
     }
 }
 
-$hadith = Hadithet::get_random();
-$email = "veniadi02@gmail.com";
 
-send_email($email,$hadith)
-?>
+
+$email_list = EmailList::find_by_type(0);
+$email = Email::find_by_date(date("Y-m-d", time()),0);
+
+foreach($email_list as $mail)
+{
+    echo(send_email($mail->email, $email->get_hadith()));
+}
+
