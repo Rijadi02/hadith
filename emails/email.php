@@ -1,6 +1,6 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-require_once("../includes/init.php");
+include("../includes/init.php");
 require '../vendor/autoload.php';
 
 function send_email($email, $hadith)
@@ -28,7 +28,7 @@ function send_email($email, $hadith)
 
     $mail->msgHTML($message);
     $mail->isHTML(true);
-    
+
     if (!$mail->send()) {
         return 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
