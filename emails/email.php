@@ -14,7 +14,7 @@ require_once "../includes/email.php";
 
 require '../vendor/autoload.php';
 
-function send_email($email, $hadith)
+function send_email($emails, $hadith)
 {
     $mail = new PHPMailer;
     $mail->isSMTP();
@@ -25,7 +25,7 @@ function send_email($email, $hadith)
     $mail->Username = 'hadith@tachyondev.tech';
     $mail->Password = 'Blender3&';
     $mail->setFrom('hadith@tachyondev.tech', 'onehadith.org');
-    $mail->addAddress($email);
+    $mail->addAddress($emails[0]);
     $mail->Subject = 'Daily Hadith';
     
     
@@ -36,6 +36,11 @@ function send_email($email, $hadith)
     $message = str_replace('%chapter%', $hadith->get_chapter()->NrKapitulli , $message);
     $message = str_replace('%book%', $hadith->get_book()->Libri , $message);
     $message = str_replace('%grade%', $hadith->Shkalla , $message);
+
+    foreach($emails as $email)
+    {
+        $mail->addBcc($email);
+    }
 
     $mail->msgHTML($message);
     $mail->isHTML(true);
@@ -51,9 +56,11 @@ function send_email($email, $hadith)
 
 $email_list = EmailList::find_by_type(0);
 $email = Email::find_by_date(date("Y-m-d", time()),0);
+$emails = [];
 
 foreach($email_list as $mail)
 {
-    echo(send_email($mail->email, $email->get_hadith()));
+    array_push($emails,$mail->email);
 }
 
+echo(send_email($emails, $email->get_hadith()));
