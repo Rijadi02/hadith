@@ -187,7 +187,7 @@ $img = $fileList[$random]
                   </div>
                   <div id="pParent-3">
                     <div id="pHide-3" class="mobileShow">
-                      <form method="POST" action="" class="screenshot border-0  pt-3">
+                      <!-- <form method="POST" action="" class="screenshot border-0  pt-3">
                         <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                           <i class="fa text-button fa-chevron-left"></i>
                         </button>
@@ -198,7 +198,15 @@ $img = $fileList[$random]
                         <span style="padding: 5px 0 0 0;">|</span>
                         <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
                           <i class="fa text-button fa-chevron-right"></i>
-                        </button>
+                        </button> -->
+
+                        <a class="btn m-0" href="?accept=true&id=<?php echo $hadith->id ?>" style="width: 60px; font-size: 20px;">
+                          <i class="fa text-button fa-check"></i>
+</a>
+<span style="padding: 5px 0 0 0;">|</span>
+<a class="btn m-0" href="?accept=false&id=<?php echo $hadith->id ?>" style="width: 60px; font-size: 20px;">
+                          <i class="fa text-button fa-times"></i>
+</a>
                       </form>
                     </div>
                   </div>
