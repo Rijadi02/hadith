@@ -24,7 +24,7 @@ if (isset($_POST['submit-email'])) {
             height: 100%;">
     <div id="layoutDefault_content" style="width: 100%; height: 100%;">
 
-        <header class="page-header overlay my-0 py-0 bg-img-cover " style='min-height: 100vh;background-image: url("https://i.pinimg.com/originals/5e/65/20/5e6520289b44e11a9e74363c18ce3ee1.jpg"); width: 100%; min-height: 100% !important; background-repeat: repeat-y !important;'>
+        <header class="page-header overlay my-0 py-0 bg-img-cover " style='min-height: 100vh;background-image: url("assets/img/bg.jpg"); width: 100%; min-height: 100% !important; background-repeat: repeat-y !important;'>
             <div class="page-header-content fade-in" style="min-height: 100vh;display: flex;
                 align-items: center;
                 justify-content: center;

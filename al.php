@@ -160,11 +160,11 @@ $img = $fileList[$random]
                           <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                             <i class="fa text-button fa-chevron-left"></i>
                           </button>
-                          <span style="padding: 10px 0 0 0;">|</span>
+                          <span style="padding: 5px 0 0 0;">|</span>
                           <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
                             <i class="fa text-button fa-redo-alt"></i>
                           </button>
-                          <span style="padding: 10px 0 0 0;">|</span>
+                          <span style="padding: 5px 0 0 0;">|</span>
                           <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
                             <i class="fa text-button fa-chevron-right"></i>
                           </button>
@@ -177,11 +177,11 @@ $img = $fileList[$random]
                           <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                             <i class="fa text-button fa-chevron-left"></i>
                           </button>
-                          <span style="padding: 10px 0 0 0;">|</span>
+                          <span style="padding: 5px 0 0 0;">|</span>
                           <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
                             <i class="fa text-button fa-redo-alt"></i>
                           </button>
-                          <span style="padding: 10px 0 0 0;">|</span>
+                          <span style="padding: 5px 0 0 0;">|</span>
                           <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
                             <i class="fa text-button fa-chevron-right"></i>
                           </button>
