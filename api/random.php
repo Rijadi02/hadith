@@ -5,9 +5,14 @@ require_once("../includes/init_head.php");
 
 $hadith = Hadithet::get_random();
 
+$fileList = glob('../images/new_n/*');
+$random = array_rand($fileList);
+$img = $fileList[$random];
+
 $array = ["Hadithi" => $hadith->Hadithi,
         "Transmetimi" => $hadith->Transmetimi,
         "Libri" => $hadith->get_chapter()->NrKapitulli . ", " .$hadith->get_book()->Libri,
-        "Shkalla" => $hadith->Shkalla];
+        "Shkalla" => $hadith->Shkalla,
+        "image" => substr($img,2)];
 
 echo json_encode($array);
