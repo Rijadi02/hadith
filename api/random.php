@@ -9,8 +9,8 @@ $fileList = glob('../images/new_n/*');
 $random = array_rand($fileList);
 $img = $fileList[$random];
 
-$array = ["Hadithi" => $hadith->Hadithi,
-        "Transmetimi" => $hadith->Transmetimi,
+$array = ["Hadithi" => narr_format($hadith->Hadithi),
+        "Transmetimi" => narr_format($hadith->Transmetimi),
         "Libri" => $hadith->get_chapter()->NrKapitulli . ", " .$hadith->get_book()->Libri,
         "Shkalla" => $hadith->Shkalla,
         "image" => substr($img,2)];
