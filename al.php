@@ -257,7 +257,7 @@ $img = $fileList[$random]
         })
         .then(function(dataUrl) {
           var link = document.createElement('a');
-          link.download = 'onehadith<?php echo $hadith->NrHadithi ?>.png';
+          link.download = 'onehadith<?php echo $hadith->id ?>.png';
           link.href = dataUrl;
           link.click();
 
