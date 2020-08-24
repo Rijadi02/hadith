@@ -9,17 +9,17 @@ $hadith = Hadith::get_random();
 // }
 
 if (isset($_POST['id'])) {
-  $hadith = Hadithet::find_by_id($_POST['id']);
+  $hadith = Hadith::find_by_id($_POST['id']);
 }
 
 if (isset($_POST['back']) or isset($_POST['next'])) {
   if (isset($_POST['next'])) {
 
-    $hadith = Hadithet::find_by_id(page_next());
+    $hadith = Hadith::find_by_id(page_next());
   }
   if (isset($_POST['back'])) {
 
-    $hadith = Hadithet::find_by_id(page_back());
+    $hadith = Hadith::find_by_id(page_back());
   }
 } else {
   page_start($hadith->id);
