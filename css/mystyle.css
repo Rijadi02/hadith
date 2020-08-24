@@ -202,7 +202,10 @@ body {
   }
 
 
-
+.text-center-mobile
+{
+  min-height: 100vh;
+}
 
 
   .mobileShow {

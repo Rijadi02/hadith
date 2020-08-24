@@ -122,7 +122,7 @@ $img = $fileList[$random]
                   </div>
 
 
-                  <div class="center-hadith" id="center-hadith" style="min-height: 85vh;display: flex;
+                  <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
@@ -131,7 +131,7 @@ $img = $fileList[$random]
                      
                     <!-- <p href="#" id="transmetuesi" class="transmetuesi"><?php $narr = explode(":",$hadith->text_en)[0] . ":" ;echo narr_format($narr) ?></p> -->
                     
-                        <p href="#" id="hadith" class="hadith" style="text-align:right;text-align: justify;text-justify: inter-word;direction:rtl;" ><?php echo $hadith->text_ar ?></p>
+                        <p href="#" id="hadith" class="hadith" style="font-size:2.5rem;font-weight: 300;text-align: justify;text-justify: inter-word;direction:rtl;" ><?php echo $hadith->text_ar ?></p>
                         <div>
                           <p href="#" id="shkalla" class="shkalla">صحيح البخاري</p>
                           <p href="#" id="libra" class="libra"><?php echo $hadith->get_ar_book() ?></p>

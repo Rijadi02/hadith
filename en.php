@@ -123,7 +123,7 @@ $img = $fileList[$random]
                   </div>
 
 
-                  <div class="center-hadith" id="center-hadith" style="min-height: 85vh;display: flex;
+                  <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
