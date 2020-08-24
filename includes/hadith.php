@@ -30,12 +30,12 @@ class Hadith extends Db_object
 
     public function get_en_book()
     {
-        return $this->hadith_no . ", " . $this->chapter_no . ", " . explode("-", $this->chapter)[0];
+        return $this->hadith_no . ", " . $this->chapter_no . ", " . explode(" - ", $this->chapter)[0];
     }
 
     public function get_ar_book()
     {
-        return $this->hadith_no . ", " . $this->chapter_no . ", " . explode("-", $this->chapter)[1];
+        return $this->hadith_no . ", " . $this->chapter_no . ", " . explode(" - ", $this->chapter)[1];
     }
 
     public static function get_random()
