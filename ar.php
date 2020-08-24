@@ -105,9 +105,7 @@ $img = $fileList[$random]
 
                   <div id="pParent-1" class="w-100 text-center">
 
-                    <button class="btn py-2 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
-                      &nbsp;
-                    </button>
+                   
 
                     <div id="pHide-1">
                       <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
