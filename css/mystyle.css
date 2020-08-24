@@ -1,15 +1,15 @@
 @keyframes slideInFromLeft {
   0% {
     overflow-y: hidden;
-    overflow-x: hidden; /* Hide vertical scrollbar */
+   
   }
   99% {
     overflow-y: hidden;
-    overflow-x: hidden; /* Hide vertical scrollbar */
+
   }
   100% {
     overflow-y: auto;
-    overflow-x: hidden; /* Hide vertical scrollbar */
+  
   }
 }
 
@@ -68,6 +68,7 @@ header {
 
 body {
     animation: 1.5s ease-out 0s 1 slideInFromLeft;
+    overflow-x: hidden;
     background-repeat: repeat-y;
     width: 100vw;
     background-color: #000;
