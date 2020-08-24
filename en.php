@@ -141,14 +141,14 @@ $img = $fileList[$random]
 
                     </div>
 
-                    <div class="mobileShow">
+                    <div class="mobileShow mt-4">
                       <p class="page-header-title py-5 my-5 mobileShow">
                       <p href="#" id="transmetuesi" class="transmetuesiM"><?php echo narr_format($hadith->get_en_narration()) ?></p>
                         
                         <p href="#" class="hadithM"><?php echo narr_format($hadith->get_en_hadith()) ?></p>
 
                         <p href="#" class="libraM">
-                          <?php echo $hadith->chapter ?></p>
+                        <?php echo $hadith->get_en_book() ?></p>
                         <p href="#" class="shkallaM mb-5"><?php echo $hadith->source ?></p>
 
                       </p>

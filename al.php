@@ -141,7 +141,7 @@ $img = $fileList[$random]
 
                     </div>
 
-                    <div class="mobileShow">
+                    <div class="mobileShow mt-4">
                       <p class="page-header-title py-5 my-5 mobileShow">
 
                         <p href="#" class="transmetuesiM mt-4"><?php echo narr_format($hadith->Transmetimi) ?></p>

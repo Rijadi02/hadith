@@ -134,19 +134,19 @@ $img = $fileList[$random]
                         <p href="#" id="hadith" class="hadith" style="text-align:right;text-align: justify;text-justify: inter-word;direction:rtl;" ><?php echo $hadith->text_ar ?></p>
                         <div>
                           <p href="#" id="shkalla" class="shkalla">صحيح البخاري</p>
-                          <p href="#" id="libra" class="libra"><?php $hadith->hadith_no ?> <?php echo explode(" - ", $hadith->chapter)[1] ?></p>
+                          <p href="#" id="libra" class="libra"><?php echo $hadith->get_ar_book() ?></p>
                         </div>
                       </p>
 
                     </div>
 
-                    <div class="mobileShow">
+                    <div class="mobileShow mt-4">
                       <p class="page-header-title py-5 my-5 mobileShow">
 
                         <p href="#" class="hadithM"><?php echo narr_format($hadith->text_ar) ?> </p>
 
                         <p href="#" class="libraM">
-                          <?php echo $hadith->chapter ?></p>
+                        <?php echo $hadith->get_ar_book() ?></p>
                         <p href="#" class="shkallaM mb-5">صحيح البخاري</p>
 
                       </p>
