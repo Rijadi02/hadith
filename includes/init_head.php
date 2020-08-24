@@ -11,5 +11,4 @@ require_once "hadithet.php";
 require_once "email_list.php";
 require_once "email.php";
 require_once "hadith.php";
-
 ?>

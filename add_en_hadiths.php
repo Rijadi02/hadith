@@ -12,7 +12,12 @@ $i = 0;
 
 foreach($json_a as $file)
 {
+
     $i++;
+    if($i > 21599)
+    {
+
+    
     $id = $file['id'];
     $hadith_id = $file['hadith_id'];
     $source = $file['source'];
@@ -35,7 +40,7 @@ foreach($json_a as $file)
     \"$text_en\");";
     echo "hadith($i) has been sucessfully registred in database...";
     echo "<br>";
-    $database->query($sql);
+    $database->query($sql);}
 
 }
 ?>

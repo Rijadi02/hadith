@@ -25,7 +25,6 @@ if (isset($_POST['back']) or isset($_POST['next'])) {
   page_start($hadith->id);
 }
 
-
 // // $_SESSION['i'] = -1;
 // // $_SESSION['page'] = [];
 
@@ -130,12 +129,12 @@ $img = $fileList[$random]
                     <div class="mobileHide pb-5">
 
                      
-                    <p href="#" id="transmetuesi" class="transmetuesi"><?php echo narr_format($hadith->get_en_narration()) ?></p>
+                    <!-- <p href="#" id="transmetuesi" class="transmetuesi"><?php $narr = explode(":",$hadith->text_en)[0] . ":" ;echo narr_format($narr) ?></p> -->
                     
-                        <p href="#" id="hadith" class="hadith" ><?php echo narr_format($hadith->get_en_hadith()) ?></p>
+                        <p href="#" id="hadith" class="hadith" style="text-align:right;text-align: justify;text-justify: inter-word;direction:rtl;" ><?php echo $hadith->text_ar ?></p>
                         <div>
-                          <p href="#" id="shkalla" class="shkalla"><?php echo $hadith->source ?></p>
-                          <p href="#" id="libra" class="libra"><?php echo $hadith->get_en_book() ?></p>
+                          <p href="#" id="shkalla" class="shkalla">صحيح البخاري</p>
+                          <p href="#" id="libra" class="libra"><?php $hadith->hadith_no ?> <?php echo explode(" - ", $hadith->chapter)[1] ?></p>
                         </div>
                       </p>
 
@@ -143,13 +142,12 @@ $img = $fileList[$random]
 
                     <div class="mobileShow">
                       <p class="page-header-title py-5 my-5 mobileShow">
-                      <p href="#" id="transmetuesi" class="transmetuesiM"><?php echo narr_format($hadith->get_en_narration()) ?></p>
-                        
-                        <p href="#" class="hadithM"><?php echo narr_format($hadith->get_en_hadith()) ?></p>
+
+                        <p href="#" class="hadithM"><?php echo narr_format($hadith->text_ar) ?> </p>
 
                         <p href="#" class="libraM">
                           <?php echo $hadith->chapter ?></p>
-                        <p href="#" class="shkallaM mb-5"><?php echo $hadith->source ?></p>
+                        <p href="#" class="shkallaM mb-5">صحيح البخاري</p>
 
                       </p>
                     </div>
