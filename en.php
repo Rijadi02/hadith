@@ -1,64 +1,29 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://css.gg/css?=" rel="stylesheet">
 <?php
 require_once("includes/init.php");
-$hadith = Hadith::get_random();
-
-// if (isset($_POST['no'])) {
-//   $hadith = Hadithet::find_by_nr($_POST['no']);
-// }
-
-if (isset($_POST['id'])) {
-  $hadith = Hadith::find_by_id($_POST['id']);
-}
-
-if (isset($_POST['back']) or isset($_POST['next'])) {
-  if (isset($_POST['next'])) {
-
-    $hadith = Hadith::find_by_id(page_next());
-  }
-  if (isset($_POST['back'])) {
-
-    $hadith = Hadith::find_by_id(page_back());
-  }
-} else {
-  page_start($hadith->id);
-}
-
-
-// // $_SESSION['i'] = -1;
-// // $_SESSION['page'] = [];
-
-// // $_SESSION['x'] = $_SESSION['x'] + 1;
-// // $fileList = glob('images/new_n/new_2/'.$_SESSION['x']+".jpg");
-
-
-$fileList = glob('images/new_n/*');
-$random = array_rand($fileList);
-$img = $fileList[$random]
 ?>
 
 
 
-  <script>
-    function copy() {
-      var $temp = $("<input>");
-      $("body").append($temp);
+<script>
+  function copy() {
+    var $temp = $("<input>");
+    $("body").append($temp);
 
-      var hadith = document.getElementById('transmetuesi').innerHTML;
-      hadith += "  ";
-      hadith += document.getElementById('hadith').innerHTML + document.getElementById('shkalla').innerHTML;
-      hadith += "  ";
-      hadith += document.getElementById('libra').innerHTML;
+    var hadith = document.getElementById('transmetuesi').innerHTML;
+    hadith += "  ";
+    hadith += document.getElementById('hadith').innerHTML + document.getElementById('shkalla').innerHTML;
+    hadith += "  ";
+    hadith += document.getElementById('libra').innerHTML;
 
-      $temp.val(hadith).select();
-      document.execCommand("copy");
-      $temp.remove();
-      alert("Hadith copied to clipboard!")
-    }
-  </script>
+    $temp.val(hadith).select();
+    document.execCommand("copy");
+    $temp.remove();
+    alert("Hadith copied to clipboard!")
+  }
+</script>
 
-  <!-- <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
+<!-- <div class="screenshot mobileHide p-1" style="z-index: 1234; font-size: 30px; position: fixed; bottom: 10px; left: 10px;">
     <button class="btn m-0 py-3" type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="width:60px;font-size: 20px; padding-bottom: 10px!important; border: 2px solid rgba(255, 255, 255, 0.2);border-radius: 50px 50px 0px 0;">
       <i class="fa text-button fa-camera"></i>
     </button>
@@ -82,77 +47,81 @@ $img = $fileList[$random]
       <i class="fa text-button fa-chevron-right"></i>
     </button>
   </form> -->
-  
-  <script>
-    if (window.history.replaceState) {
-      window.history.replaceState(null, null, window.location.href);
-    }
-  </script>
+
+<script>
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
 
 <i class="gg-shield"> </i>
 
-  <div id="layoutDefault" style="width: 100%;
+<div id="layoutDefault" style="width: 100%;
             min-height: 100%;">
-    <div id="layoutDefault_content" style="width: 100%; min-height: 100%;">
+  <div id="layoutDefault_content" style="width: 100%; min-height: 100%;">
 
-      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; min-height: 100% !important;'>
-        <div class="page-header-content fade-up" style="min-height: 100vh;">
-          <div style="z-index: 100;" class="my-container">
-            <div class="row justify-content-center">
-              <div class="col-xl-12 col-lg-12">
-                <div class="text-center-mobile">
+    <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; min-height: 100% !important;'>
+      <div class="page-header-content fade-up" style="min-height: 100vh;">
+        <div style="z-index: 100;" class="my-container">
+          <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12">
+              <div class="text-center-mobile">
 
                 <p href="/" class="transmetuesiM pb-1 pt-5 text-center"><a href="." class="text-decoration-none"> onehadith.org </a></p>
 
-                  <div id="pParent-1" class="w-100 text-center">
+                <div id="pParent-1" class="w-100 text-center">
 
-                    <button class="btn py-1 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
-                      &nbsp;
+                  <button class="btn py-1 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
+                    &nbsp;
+                  </button>
+
+                  <div id="pHide-1">
+                    <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
+                      <i class="fa text-button fa-camera"></i>
                     </button>
-
-                    <div id="pHide-1">
-                      <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
-                        <i class="fa text-button fa-camera"></i>
-                      </button>
-                      |
-                      <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
-                        <i class="fa text-button fa-clipboard"></i>
-                      </button>
-                    </div>
-
+                    |
+                    <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
+                      <i class="fa text-button fa-clipboard"></i>
+                    </button>
                   </div>
 
+                </div>
 
-                  <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
+
+                <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
+                 
+
+
                     <div class="mobileHide pb-5">
 
-                     
-                    <p href="#" id="transmetuesi" class="transmetuesi"><?php echo narr_format($hadith->get_en_narration()) ?></p>
-                    
-                        <p href="#" id="hadith" class="hadith" ><?php echo narr_format($hadith->get_en_hadith()) ?></p>
+                      <p class="page-header-title pb-4">
+
+                        <div id="hadith" class="hadith"><?php echo hadith_split($hadith->text_en, "transmetuesi") ?></div>
                         <div>
-                          <p href="#" id="shkalla" class="shkalla"><?php echo $hadith->source ?></p>
-                          <p href="#" id="libra" class="libra"><?php echo $hadith->get_en_book() ?></p>
+                          <div id="shkalla" class="shkalla"><?php echo $hadith->grade_en ?></div>
+                          <div id="libra" class="libra">
+                            <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_en ?>
+                          </div>
                         </div>
                       </p>
 
                     </div>
 
-                    <div class="mobileShow mt-4">
+                    <div class="mobileShow">
                       <p class="page-header-title py-5 my-5 mobileShow">
-                      <p href="#" id="transmetuesi" class="transmetuesiM"><?php echo narr_format($hadith->get_en_narration()) ?></p>
-                        
-                        <p href="#" class="hadithM"><?php echo narr_format($hadith->get_en_hadith()) ?></p>
 
-                        <p href="#" class="libraM">
-                        <?php echo $hadith->get_en_book() ?></p>
-                        <p href="#" class="shkallaM mb-5"><?php echo $hadith->source ?></p>
+                        <div class="hadithM"><?php echo hadith_split($hadith->text_en, "transmetuesiM") ?></div>
+
+                        <div class="libraM">
+                          <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_en ?></div>
+                        <div class="shkallaM mb-5"><?php echo $hadith->grade_en ?></div>
 
                       </p>
                     </div>
+
 
                     <div id="pParent-2">
                       <div id="pHide-2" class="mobileHide pb-4" style="position: absolute; bottom:0%; transform: translate(-50%,0)">
@@ -276,4 +245,4 @@ $img = $fileList[$random]
   </script>
 
 
-<?php require_once("includes/foot.php") ?>
+  <?php require_once("includes/foot.php") ?>

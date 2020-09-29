@@ -5,14 +5,10 @@ require_once "functions.php";
 require_once "db_object.php";
 require_once "page.php";
 
-
+require_once "librat.php";
+require_once "kapitujt.php";
+require_once "hadithet.php";
 require_once "email_list.php";
 require_once "email.php";
-require_once "collections.php";
-require_once "books.php";
-require_once "hadiths.php";
-require_once "selected.php";
-
-require_once "get_hadith.php";
-
+require_once "hadith.php";
 ?>

@@ -305,6 +305,15 @@ body {
   }
 
 
+  strong {
+  
+    color: white;
+    font-weight: 500;
+    opacity: 0.95;
+  }
+
+
+
 
   .shkalla {
     font-size: 1.5rem;
@@ -411,4 +420,9 @@ body {
     display: none !important;
   }
   
+  
+
+
+  
+ 
   

@@ -1,40 +1,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="https://css.gg/css?=" rel="stylesheet">
 <?php
 require_once("includes/init.php");
-$hadith = Hadith::get_random();
-
-// if (isset($_POST['no'])) {
-//   $hadith = Hadithet::find_by_nr($_POST['no']);
-// }
-
-if (isset($_POST['id'])) {
-  $hadith = Hadith::find_by_id($_POST['id']);
-}
-
-if (isset($_POST['back']) or isset($_POST['next'])) {
-  if (isset($_POST['next'])) {
-
-    $hadith = Hadith::find_by_id(page_next());
-  }
-  if (isset($_POST['back'])) {
-
-    $hadith = Hadith::find_by_id(page_back());
-  }
-} else {
-  page_start($hadith->id);
-}
-
-// // $_SESSION['i'] = -1;
-// // $_SESSION['page'] = [];
-
-// // $_SESSION['x'] = $_SESSION['x'] + 1;
-// // $fileList = glob('images/new_n/new_2/'.$_SESSION['x']+".jpg");
-
-
-$fileList = glob('images/new_n/*');
-$random = array_rand($fileList);
-$img = $fileList[$random]
 ?>
 
 
@@ -126,15 +92,18 @@ $img = $fileList[$random]
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
-                    <div class="mobileHide pb-5">
 
-                     
-                    <!-- <p href="#" id="transmetuesi" class="transmetuesi"><?php $narr = explode(":",$hadith->text_en)[0] . ":" ;echo narr_format($narr) ?></p> -->
+
+                    <div class="mobileHide pb-5">               
                     
-                        <p href="#" id="hadith" class="hadith" style="font-size:2.5rem;font-weight: 300;text-align: justify;text-justify: inter-word;direction:rtl;" ><?php echo $hadith->text_ar ?></p>
+                        <div id="hadith" class="hadith" style="font-size:2.5rem;font-weight: 300;text-align: justify;text-justify: inter-word;direction:rtl;" >
+                        <?php echo hadith_split($hadith->text_ar, "transmetuesi") ?>
+                        </div>
                         <div>
-                          <p href="#" id="shkalla" class="shkalla">صحيح البخاري</p>
-                          <p href="#" id="libra" class="libra"><?php echo $hadith->get_ar_book() ?></p>
+                          <div id="shkalla" class="shkalla"><?php echo $hadith->grade_ar ?></div>
+                          <div id="libra" class="libra">
+                            <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_ar ?>
+                          </div>
                         </div>
                       </p>
 
@@ -143,11 +112,14 @@ $img = $fileList[$random]
                     <div class="mobileShow mt-4">
                       <p class="page-header-title py-5 my-5 mobileShow">
 
-                        <p href="#" class="hadithM"><?php echo narr_format($hadith->text_ar) ?> </p>
+                        <div class="hadithM">
+                          <?php echo hadith_split($hadith->text_ar, "transmetuesiM") ?>
+                        </div>
 
-                        <p href="#" class="libraM">
-                        <?php echo $hadith->get_ar_book() ?></p>
-                        <p href="#" class="shkallaM mb-5">صحيح البخاري</p>
+                        <div class="libraM">
+                        <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_ar ?>
+                        </div>
+                        <div class="shkallaM mb-5"><?php echo $hadith->grade_ar ?></div>
 
                       </p>
                     </div>

@@ -10,37 +10,35 @@ $img = $fileList[$random];
 if(isset($_GET['lan'])){
         if($_GET['lan'] == "al")
         {
-                $hadith = Hadithet::get_random();
+                $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "Hadithi" => narr_format($hadith->Hadithi),
-                        "Transmetimi" => narr_format($hadith->Transmetimi),
-                        "Libri" => $hadith->get_chapter()->NrKapitulli . ", " .$hadith->get_book()->Libri,
-                        "Shkalla" => $hadith->Shkalla];
+                        "hadith" => $hadith->text_al,
+                        "book" => $hadith->hadith_no . ", Kapitulli: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_al,
+                        "grade" => $hadith->grade_al];
+
         }else if($_GET['lan'] == "en")
         {
-                $hadith = Hadith::get_random();
+               $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "Hadithi" => narr_format($hadith->get_en_hadith()),
-                        "Transmetimi" => narr_format($hadith->get_en_narration()),
-                        "Libri" => $hadith->get_en_book(),
-                        "Shkalla" => $hadith->source];
+                        "hadith" => $hadith->text_en,
+                        "book" => $hadith->hadith_no . ", Chapter: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_en,
+                        "grade" => $hadith->grade_en];
 
         }else if($_GET['lan'] == "ar")
         {
 
-                $hadith = Hadith::get_random();
+                $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "Hadithi" => $hadith->text_ar,
-                        "Transmetimi" => "",
-                        "Libri" => $hadith->get_ar_book(),
-                        "Shkalla" => $hadith->source];
+                        "hadith" => $hadith->text_ar,
+                        "book" => $hadith->hadith_no . ", الفصل: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_ar,
+                        "grade" => $hadith->grade_ar];
 
         }else
         {
-                $array = ["message" => "language doesnt exist!"];   
+                $array = ["error" => "language doesnt exist!"];   
         }
 
 
@@ -48,7 +46,7 @@ $array["image"] = substr($img,2);
 }
 else
 {
-        $array = ["message" => "language not specified!"];   
+        $array = ["error" => "language not specified!"];   
 }
 
 

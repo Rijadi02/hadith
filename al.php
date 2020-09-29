@@ -2,40 +2,6 @@
 
 <?php
 require_once("includes/init.php");
-$hadith = Hadithet::get_random();
-
-if (isset($_POST['nr'])) {
-  $hadith = Hadithet::find_by_nr($_POST['nr']);
-}
-
-if (isset($_POST['id'])) {
-  $hadith = Hadithet::find_by_id($_POST['id']);
-}
-
-if (isset($_POST['back']) or isset($_POST['next'])) {
-  if (isset($_POST['next'])) {
-
-    $hadith = Hadithet::find_by_id(page_next());
-  }
-  if (isset($_POST['back'])) {
-
-    $hadith = Hadithet::find_by_id(page_back());
-  }
-} else {
-  page_start($hadith->id);
-}
-
-
-// $_SESSION['i'] = -1;
-// $_SESSION['page'] = [];
-
-// $_SESSION['x'] = $_SESSION['x'] + 1;
-// $fileList = glob('images/new_n/new_2/'.$_SESSION['x']+".jpg");
-
-
-$fileList = glob('images/new_n/*');
-$random = array_rand($fileList);
-$img = $fileList[$random]
 ?>
 
 
@@ -100,7 +66,7 @@ $img = $fileList[$random]
         <div style="z-index: 100;" class="my-container">
           <div class="row justify-content-center">
             <div class="col-xl-12 col-lg-12">
-              <div class="text-center-mobile" >
+              <div class="text-center-mobile">
 
                 <p href="/" class="transmetuesiM pb-1 pt-5 text-center"><a href="." class="text-decoration-none"> onehadith.org </a></p>
 
@@ -131,31 +97,32 @@ $img = $fileList[$random]
 
                     <p class="page-header-title pb-4">
 
-                      <p href="#" id="transmetuesi" class="transmetuesi"><?php echo narr_format($hadith->Transmetimi) ?></p>
-                      <p href="#" id="hadith" class="hadith"><?php echo narr_format($hadith->Hadithi) ?></p>
+                      <div id="hadith" class="hadith"><?php echo al_hadith_split($hadith->text_al, "transmetuesi") ?></div>
                       <div>
-                        <p href="#" id="shkalla" class="shkalla"><?php echo $hadith->Shkalla ?></p>
-                        <p href="#" id="libra" class="libra"> <?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
+                        <div id="shkalla" class="shkalla"><?php echo $hadith->grade_en ?></div>
+                        <div id="libra" class="libra">
+                          <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_en ?>
+                        </div>
                       </div>
                     </p>
 
                   </div>
 
-                  <div class="mobileShow mt-4">
+                  <div class="mobileShow">
                     <p class="page-header-title py-5 my-5 mobileShow">
 
-                      <p href="#" class="transmetuesiM mt-4"><?php echo narr_format($hadith->Transmetimi) ?></p>
-                      <p href="#" class="hadithM"><?php echo narr_format($hadith->Hadithi) ?> </p>
+                      <div class="hadithM"><?php echo al_hadith_split($hadith->text_al, "transmetuesiM") ?></div>
 
-                      <p href="#" class="libraM">
-                        <!--<?php echo $hadith->NrHadithi ?>, --><?php echo $hadith->get_chapter()->NrKapitulli ?>, <?php echo $hadith->get_book()->Libri ?></p>
-                      <p href="#" class="shkallaM mb-5"><?php echo $hadith->Shkalla ?></p>
+                      <div class="libraM">
+                        <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_en ?></div>
+                      <div class="shkallaM mb-5"><?php echo $hadith->grade_en ?></div>
 
                     </p>
                   </div>
 
                   <div id="pParent-2">
                     <div id="pHide-2" class="mobileHide pb-4" style="position: absolute; bottom:0%; transform: translate(-50%,0)">
+                    
                       <form method="POST" action="" class="screenshot border-0  pt-3">
                         <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                           <i class="fa text-button fa-chevron-left"></i>

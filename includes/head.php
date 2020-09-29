@@ -20,20 +20,48 @@
   <link href="font/stylesheet.css" rel="stylesheet">
   <link href="css/mystyle.css" rel="stylesheet">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      overflow: overlay;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+
 
 </head>
 
 <body>
 
-<?php if(count($_GET) > 0): ?>
-<form action="<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>" style="display: none;" method="POST" id="get_to_post">
-  <?php foreach ($_GET as $key => $value) : ?>
-    <input type="hidden" name="<?php echo $key?>" value="<?php echo $value ?>">
-  <?php endforeach; ?>
-</form>
+  <?php if (count($_GET) > 0) : ?>
+    <form action="<?php echo pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) ?>" style="display: none;" method="POST" id="get_to_post">
+      <?php foreach ($_GET as $key => $value) : ?>
+        <input type="hidden" name="<?php echo $key ?>" value="<?php echo $value ?>">
+      <?php endforeach; ?>
+    </form>
 
-<script>
-  document.getElementById("get_to_post").submit();
-</script>
-<?php endif; ?>
-    
+    <script>
+      document.getElementById("get_to_post").submit();
+    </script>
+  <?php endif; ?>

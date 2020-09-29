@@ -17,6 +17,8 @@
    			if ($this->connection->connect_errno) {
    				die("Database connection faild" . $this->connection->connect_error);
    			}
+   		
+
 		}
 
 

@@ -12,12 +12,6 @@ if(!isset($_SESSION['page']))
     $_SESSION['page'] = [];
 }
 
-function page_current()
-{
-    $i = $_SESSION['i'];
-    $page = $_SESSION['page'];
-    return $page[$i];
-}
 
 function page_back()
 {
@@ -39,21 +33,14 @@ function page_next()
     $i = $_SESSION['i'];
     $page = $_SESSION['page'];
 
-    $i++;
-    
+    if($i < count($page) - 1)
+    {
+        $i++;
+    }
+
     $_SESSION['i'] = $i;
-    
+
     return $page[$i];
-    
-}
-
-
-function has_page_next()
-{
-    $i = $_SESSION['i'];
-    $page = $_SESSION['page'];
-
-    return $i < count($page) - 1;
 }
 
 
