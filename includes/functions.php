@@ -48,7 +48,7 @@ function al_hadith_split($hadith, $class)
 
     $return_str .= str_replace_first($del,$del." </p> <p>", $hadith);
 
-    echo $return_str;
+    return $return_str;
 }
 
 
@@ -73,7 +73,7 @@ function ar_hadith_split($hadith, $class)
 
     $return_str .= str_replace_first($del,$del." </p> <p>", $hadith);
 
-    echo $return_str;
+    return $return_str;
 }
 
 
