@@ -56,6 +56,7 @@ require_once("includes/init.php");
 </script>
 
 
+<div id="body">
 
 <div id="layoutDefault" style="width: 100%;
             min-height: 100%;">
@@ -122,7 +123,7 @@ require_once("includes/init.php");
 
                   <div id="pParent-2">
                     <div id="pHide-2" class="mobileHide pb-4" style="position: absolute; bottom:0%; transform: translate(-50%,0)">
-                    
+
                       <form method="POST" action="" class="screenshot border-0  pt-3">
                         <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                           <i class="fa text-button fa-chevron-left"></i>
@@ -186,6 +187,8 @@ require_once("includes/init.php");
   </div>
 </div>
 
+</div>
+
 <div style="display: none;" id="pParent">
 </div>
 
@@ -193,8 +196,8 @@ require_once("includes/init.php");
 <script type='text/javascript' defer>
   function screenshot(center = false) {
 
-    var node = document.getElementById('layoutDefault');
-    var scale = 2;
+    var node = document.getElementById('body');
+    var scale = 1.5;
 
     var photoHideNumber = 3;
     var photoParent = document.getElementById("pParent");

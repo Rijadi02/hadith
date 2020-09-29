@@ -20,11 +20,12 @@ $collection1 = 1;
 
 if (isset($_POST['accept'])) {
 
+    $request = json_decode($_SESSION['request']);
+    $al_request = json_decode($_SESSION['al_request']);
 
     if ($_POST['accept'] == "true") {
 
-        $request = json_decode($_SESSION['request']);
-        $al_request = json_decode($_SESSION['al_request']);
+     
 
         print_r($request);
 
@@ -41,7 +42,7 @@ if (isset($_POST['accept'])) {
         $hadith->chapter_no = $request->hadith[0]->chapterNumber;
         $hadith->book_no = $request->bookNumber;
         $hadith->text_en = $request->hadith[0]->body;
-        $hadith->text_ar = $request->hadith[1]->body;
+        $hadith->text_ar = $al_request[0]->ar->text;
         $hadith->text_al = $al_request[0]->translations->sq->text;
         $hadith->grade_en = grade_join($request->hadith[0]->grades);
         $hadith->grade_al = grade_join($request->hadith[0]->grades);
@@ -51,7 +52,7 @@ if (isset($_POST['accept'])) {
     } else {
         $selected = new Selected();
         $selected->collection = $collection;
-        $selected->hadith_no = $last;
+        $selected->hadith_no = $request->hadithNumber;
         $selected->selected = 0;
         
         $selected->save();

@@ -13,8 +13,8 @@ if(isset($_GET['lan'])){
                 $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "hadith" => $hadith->text_al,
-                        "book" => $hadith->hadith_no . ", Kapitulli: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_al,
+                        "hadith" => al_hadith_split($hadith->text_al, "transmetuesi"),
+                        "book" =>  $hadith->hadith_no .", ". numberToRoman($hadith->chapter_no) .", ". $hadith->get_book()->book_en,
                         "grade" => $hadith->grade_al];
 
         }else if($_GET['lan'] == "en")
@@ -22,8 +22,8 @@ if(isset($_GET['lan'])){
                $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "hadith" => $hadith->text_en,
-                        "book" => $hadith->hadith_no . ", Chapter: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_en,
+                        "hadith" => hadith_split($hadith->text_en, "transmetuesi"),
+                        "book" => $hadith->hadith_no .", ". numberToRoman($hadith->chapter_no) .", ". $hadith->get_book()->book_en,
                         "grade" => $hadith->grade_en];
 
         }else if($_GET['lan'] == "ar")
@@ -32,8 +32,8 @@ if(isset($_GET['lan'])){
                 $hadith = Hadiths::get_random();
 
                 $array = ["id" => $hadith->id,
-                        "hadith" => $hadith->text_ar,
-                        "book" => $hadith->hadith_no . ", الفصل: " . $hadith->chapter_no . ", " . $hadith->get_book()->book_ar,
+                        "hadith" => ar_hadith_split($hadith->text_ar, "transmetuesi"),
+                        "book" => $hadith->hadith_no .", ". numberToRoman($hadith->chapter_no) .", ". $hadith->get_book()->book_ar,
                         "grade" => $hadith->grade_ar];
 
         }else

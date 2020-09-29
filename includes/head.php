@@ -18,6 +18,7 @@
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
   <script data-search-pseudo-elements defer src="js/all.min.js"></script>
   <link href="font/stylesheet.css" rel="stylesheet">
+  <link href="font/kitab/stylesheet.css" rel="stylesheet">
   <link href="css/mystyle.css" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">

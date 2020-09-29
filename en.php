@@ -54,45 +54,47 @@ require_once("includes/init.php");
   }
 </script>
 
-<i class="gg-shield"> </i>
 
-<div id="layoutDefault" style="width: 100%;
+<div id="body">
+
+
+  <div id="layoutDefault" style="width: 100%;
             min-height: 100%;">
-  <div id="layoutDefault_content" style="width: 100%; min-height: 100%;">
+    <div id="layoutDefault_content" style="width: 100%; min-height: 100%;">
 
-    <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; min-height: 100% !important;'>
-      <div class="page-header-content fade-up" style="min-height: 100vh;">
-        <div style="z-index: 100;" class="my-container">
-          <div class="row justify-content-center">
-            <div class="col-xl-12 col-lg-12">
-              <div class="text-center-mobile">
+      <div id="main" class="page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>"); width: 100%; min-height: 100% !important;'>
+        <div class="page-header-content fade-up" style="min-height: 100vh;">
+          <div style="z-index: 100;" class="my-container">
+            <div class="row justify-content-center">
+              <div class="col-xl-12 col-lg-12">
+                <div class="text-center-mobile">
 
-                <p href="/" class="transmetuesiM pb-1 pt-5 text-center"><a href="." class="text-decoration-none"> onehadith.org </a></p>
+                  <p href="/" class="transmetuesiM pb-1 pt-5 text-center"><a href="." class="text-decoration-none"> onehadith.org </a></p>
 
-                <div id="pParent-1" class="w-100 text-center">
+                  <div id="pParent-1" class="w-100 text-center">
 
-                  <button class="btn py-1 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
-                    &nbsp;
-                  </button>
-
-                  <div id="pHide-1">
-                    <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
-                      <i class="fa text-button fa-camera"></i>
+                    <button class="btn py-1 mobileHide" type='button' id='dummy_hide' value='Take screenshot' style="display:none;font-size: 20px; border: none">
+                      &nbsp;
                     </button>
-                    |
-                    <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
-                      <i class="fa text-button fa-clipboard"></i>
-                    </button>
+
+                    <div id="pHide-1">
+                      <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
+                        <i class="fa text-button fa-camera"></i>
+                      </button>
+                      |
+                      <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
+                        <i class="fa text-button fa-clipboard"></i>
+                      </button>
+                    </div>
+
                   </div>
 
-                </div>
 
-
-                <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
+                  <div class="center-hadith" id="center-hadith" style="min-height: 82vh;display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;">
-                 
+
 
 
                     <div class="mobileHide pb-5">
@@ -188,61 +190,63 @@ require_once("includes/init.php");
     </div>
   </div>
 
-  <div style="display: none;" id="pParent">
-  </div>
+</div>
+
+<div style="display: none;" id="pParent">
+</div>
 
 
-  <script type='text/javascript' defer>
-    function screenshot(center = false) {
+<script type='text/javascript' defer>
+  function screenshot(center = false) {
 
-      var node = document.getElementById('layoutDefault');
-      var scale = 2;
+    var node = document.getElementById('body');
+    var scale = 1.5;
 
-      var photoHideNumber = 3;
-      var photoParent = document.getElementById("pParent");
+    var photoHideNumber = 3;
+    var photoParent = document.getElementById("pParent");
 
-      for (var i = 1; i <= photoHideNumber; i++) {
-        var photo = document.getElementById("pHide-" + i.toString());
-        photoParent.appendChild(photo)
-      }
-      document.getElementById("dummy_hide").style.display = "block";
-
-      // if (center) {
-      //   var ch = document.getElementById("center-hadith");
-
-      //   ch.style.minHeight = "88vh"
-      // }
-
-      domtoimage.toPng(node, {
-          quality: 5,
-          height: node.offsetHeight * scale,
-          width: node.offsetWidth * scale,
-          style: {
-            transform: "scale(" + scale + ")",
-            transformOrigin: "top left",
-            width: node.offsetWidth + "px",
-            height: node.offsetHeight + "px"
-          }
-        })
-        .then(function(dataUrl) {
-          var link = document.createElement('a');
-          link.download = 'onehadith<?php echo $hadith->id ?>.png';
-          link.href = dataUrl;
-          link.click();
-
-          document.getElementById("dummy_hide").style.display = "none";
-
-          for (var i = 1; i <= photoHideNumber; i++) {
-            var photo = document.getElementById("pHide-" + i.toString());
-            document.getElementById("pParent-" + i.toString()).appendChild(photo);
-          }
-
-          // if (center) {
-          //   ch.style.minHeight = "84vh"
-          // }
-        });
+    for (var i = 1; i <= photoHideNumber; i++) {
+      var photo = document.getElementById("pHide-" + i.toString());
+      photoParent.appendChild(photo)
     }
-  </script>
+    document.getElementById("dummy_hide").style.display = "block";
+
+    // if (center) {
+    //   var ch = document.getElementById("center-hadith");
+
+    //   ch.style.minHeight = "88vh"
+    // }
+
+    domtoimage.toPng(node, {
+        quality: 5,
+        height: node.offsetHeight * scale,
+        width: node.offsetWidth * scale,
+        style: {
+          transform: "scale(" + scale + ")",
+          transformOrigin: "top left",
+          width: node.offsetWidth + "px",
+          height: node.offsetHeight + "px"
+        }
+      })
+      .then(function(dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'onehadith<?php echo $hadith->id ?>.png';
+        link.href = dataUrl;
+        link.click();
+
+        document.getElementById("dummy_hide").style.display = "none";
+
+        for (var i = 1; i <= photoHideNumber; i++) {
+          var photo = document.getElementById("pHide-" + i.toString());
+          document.getElementById("pParent-" + i.toString()).appendChild(photo);
+        }
+
+        // if (center) {
+        //   ch.style.minHeight = "84vh"
+        // }
+      });
+  }
+</script>
 
 
-  <?php require_once("includes/foot.php") ?>
+<?php require_once("includes/foot.php") ?>
