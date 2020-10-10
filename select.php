@@ -159,11 +159,11 @@ $img = $fileList[$random]
                                     <div class="mobileShow">
                                         <p class="page-header-title py-5 my-5 mobileShow">
                                             
-                                            <div class="hadithM"><?php echo hadith_split($request->hadith[0]->body, "transmetuesiM") ?></div>
-
-                                        <div class="libraM">
-                                            <?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
-                                        <div class="shkallaM mb-5"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                        <div id="hadith" class="hadithM"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "transmetuesiM") ?></div>
+                                            <div>
+                                                <div id="shkalla" class="shkallaM"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                                <div id="libra" class="libraM"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
+                                            </div>
 
                                         </p>
                                     </div>
