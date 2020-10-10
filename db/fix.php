@@ -249,7 +249,7 @@ $img = $fileList[$random]
   function screenshot(center = false) {
 
     var node = document.getElementById('layoutDefault');
-    var scale = 1.5;
+    var scale = 2;
 
     var photoHideNumber = 3;
     var photoParent = document.getElementById("pParent");

@@ -200,7 +200,7 @@ require_once("includes/init.php");
   function screenshot(center = false) {
 
     var node = document.getElementById('body');
-    var scale = 1.5;
+    var scale = 2;
 
     var photoHideNumber = 3;
     var photoParent = document.getElementById("pParent");
