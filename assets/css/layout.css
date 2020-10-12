@@ -1,0 +1,89 @@
+header {
+    background: #333;
+    padding: 30px;
+}
+
+
+body {
+    animation: 1.5s ease-out 0s 1 slideInFromLeft;
+    overflow-x: hidden;
+    background-repeat: repeat-y;
+    width: 100vw;
+    background-color: #000;
+    min-height: 100%;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+
+.overlay {
+    position: relative;
+}
+
+.overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    animation: 1.5s ease-out 0s 1 fade;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+
+.bg-img-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.my-container {
+    padding-right: 12% !important;
+    padding-left: 12% !important;
+    position: relative;
+}
+
+.text-center-mobile {
+    min-height: 100vh;
+}
+
+
+
+
+.areas
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+.top-area{
+    display: inline-block;
+}
+.center-area{
+    display: inline-block;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    
+}
+.bottom-area{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem 0;
+}

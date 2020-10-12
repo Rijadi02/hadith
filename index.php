@@ -1,4 +1,4 @@
-<link href="css/styles.css" rel="stylesheet" />
+<link href="assets/css/styles.css" rel="stylesheet" />
 <?php
 require_once("includes/init.php");
 
@@ -140,5 +140,5 @@ if (isset($_POST['submit-email'])) {
 </div>
 
 
-<?php require_once("includes/foot.php") ?>
+<?php require_once("includes/templates/foot.php") ?>
 

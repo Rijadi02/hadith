@@ -1,5 +1,0 @@
-<?php
-
-$str = '<p><span narrator="narrator">Abdullah ibn Zubejr Humejdiu na ka th&euml;n&euml;: Na ka treguar Sufjani, e k&euml;tij i ka treguar Jahja ibn Said Ensariu, e ky thot&euml;: m&euml; ka treguar Muhamed ibn Ibrahim Tejmiju se e ka d&euml;gjuar Alkame ibn Vekas Lejthiun duke th&euml;n&euml;:</span> Omer ibn Hatabi (Allahu qoft&euml; i k&euml;naqur me t&euml;&lrm;&lrm;) duke ligj&euml;ruar n&euml; minber, tha: E kam d&euml;gjuar Pejgamberin ﷺ duke th&euml;n&euml;: <strong>&ldquo;Me t&euml; v&euml;rtet&euml;, veprat vler&euml;sohen sipas nijetit dhe secili do t&euml; shp&euml;rblehet sipas asaj q&euml; ka b&euml;r&euml; nijet. Andaj, n&euml;se dikush ka b&euml;r&euml; hixhret me q&euml;llim t&euml; arritjes s&euml; t&euml; mirave t&euml; dynjas&euml; ose q&euml; t&euml; martohet me ndonj&euml; fem&euml;r, hixhreti i tij do t&euml; vler&euml;sohet sipas nijetit t&euml; tij.&rdquo;</strong></p>';
-
-echo  str_replace('<span narrator="narrator">' , 'hello', $str);

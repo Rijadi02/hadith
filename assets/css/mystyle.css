@@ -1,0 +1,24 @@
+.mobileShow {
+  display: none;
+}
+
+.mobileHide {
+  display: block;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width : 120px) and (max-device-width : 480px) {
+  .mobileShow {
+    display: inline;
+  }
+  .text-center-mobile {
+    text-align: center;
+  }
+  .mobileHide {
+    display: none;
+  }
+}
+
+
+
+
