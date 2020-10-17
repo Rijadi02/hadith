@@ -41,7 +41,6 @@ function capFL(string) {
 </script>
 
 
--->
 
 
 <div id="body">

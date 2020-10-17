@@ -41,8 +41,6 @@ function capFL(string) {
 </script>
 
 
--->
-
 
 <div id="body">
   <div id="main" class="w-100 page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>")'>
