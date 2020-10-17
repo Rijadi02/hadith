@@ -5,7 +5,7 @@ function hadith_split($hadith, $class)
 {
     if(substr_count($hadith,"<p>") > 1)
     {
-        $hadith = str_replace_first("<p>", "<p class=\"$class\"> id=\"$class\">", $hadith);
+        $hadith = str_replace_first("<p>", "<p class=\"$class\" id=\"$class\">", $hadith);
     }
     return $hadith;
 }
