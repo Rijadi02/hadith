@@ -15,6 +15,6 @@ require_once "models/books.php";
 require_once "models/hadiths.php";
 require_once "models/selected.php";
 
-require_once "templates/get_hadith.php";
+
 
 ?>

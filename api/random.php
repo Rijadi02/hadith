@@ -1,9 +1,11 @@
 <?php
+
+//error_reporting(0);
 header("Access-Control-Allow-Origin: *");
 
 require_once("../includes/init_head.php");
 
-$fileList = glob('../images/new_n/*');
+$fileList = glob('../assets/img/backgrounds/*');
 $random = array_rand($fileList);
 $img = $fileList[$random];
 
