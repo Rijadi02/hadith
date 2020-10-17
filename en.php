@@ -74,7 +74,7 @@ function capFL(string) {
           <div class="center-area">
             <p class="page-header-title pb-4 w-100">
 
-              <div id="hadith" class="hadith"><?php echo al_hadith_split($hadith->text_en, "narrator") ?></div>
+              <div id="hadith" class="hadith"><?php echo hadith_split($hadith->text_en, "narrator") ?></div>
               <div>
                 <div id="grade" class="grade"><?php echo $hadith->grade_en ?></div>
                 <div id="book" class="book">
