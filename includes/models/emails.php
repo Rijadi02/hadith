@@ -22,7 +22,7 @@ class Emails extends Db_object
 
     public function get_hadith()
     {
-        return Hadiths::find_by_id($this->hadith);
+        return Hadiths::get_by_id($this->hadith);
     }
     
 }

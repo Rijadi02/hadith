@@ -50,6 +50,11 @@ if ( window.history.replaceState ) {
                                             document.getElementById("email").value = document.getElementById("emailold").value;
                                         }
 
+                                        function closeModal() {
+                                            document.getElementById("modal-type").style.display = "none";
+                                            document.getElementById("email").value = "";
+                                        }
+
                                         function submitType(type) {
                                             console.log(document.getElementById("email").value);
                                             document.getElementById("type").value = type;
@@ -57,7 +62,7 @@ if ( window.history.replaceState ) {
                                         }
                                     </script>
 
-                                    <div id="modal-type" class="message" onclick="message(this)" style="display:none">
+                                    <div id="modal-type" class="message" onclick="closeModal()" style="display:none">
                                         <div class="message-text text-center text-<?php echo $msg_type; ?>">
                                             <button class="btn" style="font-size: 1rem; color:white; opacity:0.7" href=".">
                                                 < Back</button> <br>
