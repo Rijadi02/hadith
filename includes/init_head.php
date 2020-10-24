@@ -9,7 +9,7 @@ require_once "functions/page.php";
 require_once "functions/string_format.php";
 
 require_once "models/email_list.php";
-require_once "models/email.php";
+require_once "models/emails.php";
 require_once "models/collections.php";
 require_once "models/books.php";
 require_once "models/hadiths.php";

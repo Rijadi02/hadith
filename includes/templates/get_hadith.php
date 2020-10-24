@@ -3,7 +3,7 @@
 $hadith = Hadiths::get_random();
 
 if (isset($_POST['id'])) {
-  $hadith = Hadiths::find_by_id($_POST['id']);
+  $hadith = Hadiths::get_by_id($_POST['id']);
 }
 
 
@@ -19,7 +19,7 @@ if (isset($_POST['back']) or isset($_POST['next']) or isset($_POST['res'])) {
   
       if(has_page_next())
       {
-        $hadith = Hadiths::find_by_id(page_next());
+        $hadith = Hadiths::get_by_id(page_next());
       }
       else
       { 
@@ -29,11 +29,11 @@ if (isset($_POST['back']) or isset($_POST['next']) or isset($_POST['res'])) {
     }
    
     if (isset($_POST['back'])) {
-      $hadith = Hadiths::find_by_id(page_back());
+      $hadith = Hadiths::get_by_id(page_back());
     }
   
     if (isset($_POST['res'])) {
-      $hadith = Hadiths::find_by_id(page_current());
+      $hadith = Hadiths::get_by_id(page_current());
     }
     
   } else {

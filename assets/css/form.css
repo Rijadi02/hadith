@@ -129,3 +129,17 @@ button {
     transform: translate(-50%, -50%);
     font-size: 5rem;
 }
+
+.email-input
+{
+    color: white;
+    border-bottom: 1px solid white !important;
+    background-color: transparent !important;
+}
+
+@media only screen and (min-device-width : 120px) and (max-device-width : 480px) {
+    .email-input
+    {
+        width: 80% !important;
+    }
+}

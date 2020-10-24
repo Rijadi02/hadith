@@ -79,7 +79,7 @@ function capFL(string) {
               <div>
                 <div id="grade" class="grade"><?php echo $hadith->grade_ar ?></div>
                 <div id="book" class="book">
-                  <?php echo $hadith->hadith_no ?>, <?php echo numberToRoman($hadith->chapter_no) ?>, <?php echo $hadith->get_book()->book_ar ?>
+                <?php echo $hadith->book_str("ar") ?>
                 </div>
               </div>
             </p>
