@@ -1,4 +1,4 @@
-<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
 <?php
 require_once("includes/init.php");
@@ -92,9 +92,7 @@ $_SESSION['al_request'] = $json_al_request;
 
 $book = Books::find_by_no($collection, $request->bookNumber);
 
-$fileList = glob('images/new_n/*');
-$random = array_rand($fileList);
-$img = $fileList[$random]
+
 ?>
 
 
@@ -147,10 +145,10 @@ $img = $fileList[$random]
 
                                         <p class="page-header-title pb-4">
 
-                                            <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "transmetuesi") ?></div>
+                                            <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "narrator") ?></div>
                                             <div>
-                                                <div id="shkalla" class="shkalla"><?php echo grade_join($request->hadith[0]->grades) ?></div>
-                                                <div id="libra" class="libra"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
+                                                <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                                <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
                                             </div>
                                         </p>
 
@@ -159,10 +157,10 @@ $img = $fileList[$random]
                                     <div class="mobileShow">
                                         <p class="page-header-title py-5 my-5 mobileShow">
                                             
-                                        <div id="hadith" class="hadithM"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "transmetuesiM") ?></div>
+                                        <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "narrator") ?></div>
                                             <div>
-                                                <div id="shkalla" class="shkallaM"><?php echo grade_join($request->hadith[0]->grades) ?></div>
-                                                <div id="libra" class="libraM"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
+                                                <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                                <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
                                             </div>
 
                                         </p>
@@ -225,4 +223,4 @@ $img = $fileList[$random]
 
 
 
-<?php require_once("includes/foot.php") ?>
+<?php require_once("includes/templates/foot.php") ?>
