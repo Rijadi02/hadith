@@ -1,0 +1,56 @@
+{
+    "name": "name",
+    "method": "post",
+    "action": "",
+    "class": "",
+    "id": "",
+    "inputs": {
+        "html_before": "before",
+        "html_after": "after",
+        "field_class": "",
+        "value": "you can use %name% to replace field name",
+        "label_class" : "something",
+        "fields": [
+            {
+                "label":
+                {
+                    "html":"Hello",
+                    "class":"label"
+                },
+                "type": "input",
+
+                "name": "name",
+                "input_type": "text"
+            },
+            {
+                "type" : "html",
+                "html" : "hello"
+            },
+            {
+                "type": "select",
+                "name": "select",
+                "options": [
+                    {
+                        "key": "1",
+                        "value": "hello"
+                    },
+                    {
+                        "key": "2",
+                        "value": "hello",
+                        "seclected": true
+                    },
+                    {
+                        "key": "3",
+                        "value": "hello"
+                    }
+                ]
+            },
+            {
+                "type": "checkbox",
+                "name": "checkbox",
+                "label": "Hello:",
+                "selected": true
+            }
+        ]
+    }
+}

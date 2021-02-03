@@ -77,10 +77,10 @@ function capFL(string) {
 
               <div id="hadith" class="hadith hadith-ar"><?php echo ar_hadith_split($hadith->text_ar, "narrator") ?></div>
               <div>
-                <div id="grade" class="grade"><?php echo $hadith->grade_ar ?></div>
-                <div id="book" class="book">
+              <div id="grade" class="grade">(<?php echo $hadith->grade_ar ?>, <?php echo $hadith->hadith_no ?>)</div>
+                <!-- <div id="book" class="book">
                 <?php echo $hadith->book_str("ar") ?>
-                </div>
+                </div> -->
               </div>
             </p>
           </div>
@@ -90,10 +90,10 @@ function capFL(string) {
               <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
                 <i class="fa text-button fa-chevron-left "></i>
               </button>
-              <span style="padding: 5px 0 0 0;">|</span>
+              <!-- <span style="padding: 5px 0 0 0;">|</span>
               <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
                 <i class="fa text-button fa-redo-alt "></i>
-              </button>
+              </button> -->
               <span style="padding: 5px 0 0 0;">|</span>
               <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
                 <i class="fa text-button fa-chevron-right "></i>

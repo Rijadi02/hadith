@@ -23,11 +23,13 @@ if (isset($_POST['accept'])) {
     $request = json_decode($_SESSION['request']);
     $al_request = json_decode($_SESSION['al_request']);
 
+    // echo "<script>console.log('$al_request')</script>";
+
     if ($_POST['accept'] == "true") {
 
      
 
-        print_r($request);
+        // print_r($request);
 
         $selected = new Selected();
         $selected->collection = $collection;
@@ -58,7 +60,7 @@ if (isset($_POST['accept'])) {
         $selected->save();
     }
 
-    redirect("./select");
+    // redirect("./select");
 }
 
 try {
@@ -182,9 +184,17 @@ $book = Books::find_by_no($collection, $request->bookNumber);
                                         <div id="pHide-3" class="mobileShow">
 
 
-                                            <a class="btn m-0" href="?accept=true&id=<?php echo $last ?>" style="width: 60px; font-size: 20px;">
+                                            <a class="btn m-0" id="link" href="?accept=true&id=<?php echo $last ?>" style="width: 60px; font-size: 20px;">
                                                 <i class="fa text-button fa-check"></i>
                                             </a>
+                                            <script>
+                                            function clickTheLink() {
+    var a = document.getElementById('link');
+    a.click();
+}
+clickTheLink();
+//                                             </script>
+                                            
                                             <span style="padding: 5px 0 0 0;">|</span>
                                             <a class="btn m-0" href="?accept=false&id=<?php echo $last ?>" style="width: 60px; font-size: 20px;">
                                                 <i class="fa text-button fa-times"></i>

@@ -76,10 +76,10 @@ function capFL(string) {
 
               <div id="hadith" class="hadith"><?php echo hadith_split($hadith->text_en, "narrator") ?></div>
               <div>
-                <div id="grade" class="grade"><?php echo $hadith->grade_en ?></div>
-                <div id="book" class="book">
+              <div id="grade" class="grade">(<?php echo $hadith->grade_en ?>, <?php echo $hadith->hadith_no ?>)</div>
+                <!-- <div id="book" class="book">
                 <?php echo $hadith->book_str("en") ?>
-                </div>
+                </div> -->
               </div>
             </p>
           </div>
