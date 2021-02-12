@@ -27,7 +27,7 @@ if (isset($_POST['accept'])) {
 
     if ($_POST['accept'] == "true") {
 
-     
+
 
         // print_r($request);
 
@@ -56,7 +56,7 @@ if (isset($_POST['accept'])) {
         $selected->collection = $collection;
         $selected->hadith_no = $request->hadithNumber;
         $selected->selected = 0;
-        
+
         $selected->save();
     }
 
@@ -72,8 +72,7 @@ try {
 $json_request = sunnah_hadith_request($collection, $last);
 $request = json_decode($json_request);
 
-if(isset($request->error))
-{
+if (isset($request->error)) {
     if ($request->error->code == 404) {
         $selected = new Selected();
         $selected->collection = $collection;
@@ -83,7 +82,6 @@ if(isset($request->error))
         $selected->save();
         redirect("./select");
     }
-    
 }
 
 $json_al_request = hadithet_hadith_request($collection1, $last);
@@ -147,23 +145,23 @@ $book = Books::find_by_no($collection, $request->bookNumber);
 
                                         <p class="page-header-title pb-4">
 
-                                            <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "narrator") ?></div>
-                                            <div>
-                                                <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
-                                                <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
-                                            </div>
+                                        <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "narrator") ?></div>
+                                        <div>
+                                            <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                            <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
+                                        </div>
                                         </p>
 
                                     </div>
 
                                     <div class="mobileShow">
                                         <p class="page-header-title py-5 my-5 mobileShow">
-                                            
+
                                         <div id="hadith" class="hadith"><?php echo al_hadith_split($al_request[0]->translations->sq->text, "narrator") ?></div>
-                                            <div>
-                                                <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
-                                                <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
-                                            </div>
+                                        <div>
+                                            <div id="grade" class="grade"><?php echo grade_join($request->hadith[0]->grades) ?></div>
+                                            <div id="book" class="book"><?php echo $request->hadithNumber ?>, <?php echo  $request->hadith[0]->chapterNumber ?>, <?php echo $book->book_en ?></div>
+                                        </div>
 
                                         </p>
                                     </div>
@@ -187,14 +185,14 @@ $book = Books::find_by_no($collection, $request->bookNumber);
                                             <a class="btn m-0" id="link" href="?accept=true&id=<?php echo $last ?>" style="width: 60px; font-size: 20px;">
                                                 <i class="fa text-button fa-check"></i>
                                             </a>
-                                            <script>
+                                            <!-- <script>
                                             function clickTheLink() {
-    var a = document.getElementById('link');
-    a.click();
-}
-clickTheLink();
-//                                             </script>
-                                            
+                                                    var a = document.getElementById('link');
+                                                    a.click();
+                                                }
+                                                clickTheLink();
+                                             </script> -->
+
                                             <span style="padding: 5px 0 0 0;">|</span>
                                             <a class="btn m-0" href="?accept=false&id=<?php echo $last ?>" style="width: 60px; font-size: 20px;">
                                                 <i class="fa text-button fa-times"></i>

@@ -13,19 +13,19 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>onehadith.org</title>
-
-  <link rel="stylesheet" href="assets/css/font-awsome.min.css">
+  
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-  <script data-search-pseudo-elements defer src="assets/js/all.min.js"></script>
   <link href="assets/font/stylesheet.css" rel="stylesheet">
   <link href="assets/font/kitab/stylesheet.css" rel="stylesheet">
-
+  
   <link href="assets/css/mystyle.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/form.css">
   <link rel="stylesheet" href="assets/css/hadith.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/text.css">
+  
+  <script src="assets/js/feather.min.js" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -72,3 +72,5 @@
       document.getElementById("get_to_post").submit();
     </script>
   <?php endif; ?>
+
+

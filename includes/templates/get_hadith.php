@@ -6,6 +6,11 @@ if (isset($_POST['id'])) {
   $hadith = Hadiths::get_by_id($_POST['id']);
 }
 
+if (isset($_GET['hadith'])) {
+  $data = explode("_", $_POST['hadith']);
+  $hadith = Hadiths::get_by_hadith_number($data[0], $data[1]);
+}
+
 
 // if (isset($_POST['no'])) {
 //   $hadith = Hadithet::find_by_nr($_POST['no']);

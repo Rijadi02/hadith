@@ -5,14 +5,12 @@ require_once("includes/init.php");
 ?>
 
 <script>
-
-function capFL(string) {
-  while(string.charAt(0) == " ")
-  {
-    string = string.slice(1);
+  function capFL(string) {
+    while (string.charAt(0) == " ") {
+      string = string.slice(1);
+    }
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
 
 
   function copy() {
@@ -21,10 +19,10 @@ function capFL(string) {
 
     var narrator = document.getElementById('narrator').textContent;
     var hadith_only = document.getElementById('hadith').textContent;
-    hadith_only = hadith_only.replace(narrator,"");
+    hadith_only = hadith_only.replace(narrator, "");
     var hadith = narrator + "\r\n" + capFL(hadith_only);
     hadith += "\r\n[" + document.getElementById('grade').textContent + "]";
-    
+
 
     $temp.val(hadith).select();
     document.execCommand("copy");
@@ -57,11 +55,11 @@ function capFL(string) {
             <div class="w-100 text-center remove">
 
               <button class="btn py-2 " type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();' style="font-size: 20px; border: none">
-                <i class="fa text-button fa-camera"></i>
+                <i data-feather="camera" class="text-button"></i>
               </button>
-              |
+              <span class="text-button_light">|</span>
               <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
-                <i class="fa text-button fa-clipboard"></i>
+                <i data-feather="clipboard" class="text-button"></i>
               </button>
 
 
@@ -74,28 +72,28 @@ function capFL(string) {
           <div class="center-area">
             <p class="page-header-title pb-4 w-100">
 
-              <div id="hadith" class="hadith"><?php echo hadith_split($hadith->text_en, "narrator") ?></div>
-              <div>
+            <div id="hadith" class="hadith"><?php echo hadith_split($hadith->text_en, "narrator") ?></div>
+            <div>
               <div id="grade" class="grade">(<?php echo $hadith->grade_en ?>, <?php echo $hadith->hadith_no ?>)</div>
-                <!-- <div id="book" class="book">
+              <!-- <div id="book" class="book">
                 <?php echo $hadith->book_str("en") ?>
                 </div> -->
-              </div>
+            </div>
             </p>
           </div>
 
           <div class="bottom-area">
             <form method="POST" action="" class="screenshot border-0 remove pt-3">
               <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
-                <i class="fa text-button fa-chevron-left "></i>
+                <i data-feather="chevron-left" class="text-button_bold"></i>
               </button>
-              <span style="padding: 5px 0 0 0;">|</span>
-              <button class="btn" type='submit' id='but_res' name="res" value='Reset' style="width: 60px; font-size: 20px">
-                <i class="fa text-button fa-redo-alt "></i>
-              </button>
-              <span style="padding: 5px 0 0 0;">|</span>
+              <!-- <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
+              <button class="btn" type='submit' id='but_res' name="next" value='Reset' style="width: 60px; font-size: 20px">
+                 <i data-feather="repeat" class="text-button_bold"></i>
+              </button> -->
+              <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
               <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
-                <i class="fa text-button fa-chevron-right "></i>
+                <i data-feather="chevron-right" class="text-button_bold"></i>
               </button>
             </form>
           </div>
