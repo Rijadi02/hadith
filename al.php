@@ -1,12 +1,10 @@
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
 
-<?php if(isset($_GET['hadith'])) : ?>
-<meta property="og:image" content="assets/screenshots/al/<?php echo $_GET['hadith'] ?>.png" />
-<?php endif; ?>
 
 
 <?php
+$folder = "al";
 require_once("includes/init.php");
 ?>
 
