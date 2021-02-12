@@ -70,7 +70,7 @@ class Hadiths extends Db_object
         $the_result_array = self::find_by_query(
             'SELECT * FROM ' .
                 self::$db_table .
-                " WHERE hadith_no = $no AND collection = '$collection' LIMIT 1;"
+                " WHERE hadith_no = '$no' AND collection = '$collection' LIMIT 1;"
         );
         return !empty($the_result_array)
             ? array_shift($the_result_array)

@@ -30,7 +30,6 @@
     <meta property="og:image" content="assets/screenshots/<?php echo $folder ?>/<?php echo $_GET['hadith'] ?>.png" />
   <?php endif; ?>
 
-  
   <script src="assets/js/feather.min.js" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
