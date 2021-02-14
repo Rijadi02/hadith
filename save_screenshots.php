@@ -116,7 +116,7 @@ function save_screenshot(){
 
     console.log(document.getElementsByClassName("remove"));
 
-    var scale = 2;
+    var scale = 0.5;
 
     domtoimage.toPng(node, {
         quality: 500,

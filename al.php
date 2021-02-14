@@ -4,8 +4,8 @@
 
 
 <?php
-$folder = "al";
-require_once("includes/init.php");
+$folder = 'al';
+require_once 'includes/init.php';
 ?>
 
 
@@ -17,7 +17,7 @@ require_once("includes/init.php");
 
 
 <div id="body">
-  <div id="main" class="w-100 page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img ?>")'>
+  <div id="main" class="w-100 page-header overlay my-0 py-0 bg-img-cover" style='background-image: url("<?php echo $img; ?>")'>
     <div class="page-header-content fade-up">
       <div style="z-index: 100;" class="my-container">
         <div class="areas">
@@ -42,8 +42,6 @@ require_once("includes/init.php");
                 <i data-feather="clipboard" class="text-button"></i>
               </button>
 
-
-
             </div>
 
           </div>
@@ -53,11 +51,14 @@ require_once("includes/init.php");
           <div class="center-area">
            
 
-              <div id="hadith" class="hadith"><?php echo al_hadith_split($hadith->text_al, "narrator") ?></div>
+              <div id="hadith" class="hadith"><?php echo al_hadith_split(
+                  $hadith->text_al,
+                  'narrator'
+              ); ?></div>
               <div>
-                <div id="grade" class="grade">(<?php echo $hadith->grade_al ?>, <?php echo $hadith->hadith_no ?>)</div>
+                <div id="grade" class="grade">(<?php echo $hadith->grade_al; ?>, <?php echo $hadith->hadith_no; ?>)</div>
                 <!-- <div id="book" class="book">
-                  <?php echo $hadith->book_str("al") ?>
+                  <?php echo $hadith->book_str('al'); ?>
                 </div> -->
               </div>
            
@@ -66,15 +67,19 @@ require_once("includes/init.php");
           <div class="bottom-area">
             <form method="POST" action="" class="screenshot border-0 remove pt-3">
               <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
-                <i data-feather="chevron-left" class="text-button_bold"></i>
+                <i data-feather="arrow-left-circle" class="text-button_bold"></i>
               </button>
               <!-- <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
               <button class="btn" type='submit' id='but_res' name="next" value='Reset' style="width: 60px; font-size: 20px">
                  <i data-feather="repeat" class="text-button_bold"></i>
               </button> -->
-              <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
+              <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
+              <a class="btn" href="." style="width: 60px; font-size: 20px">
+                 <i data-feather="home" class="text-button_bold"></i>
+              </a>
+              <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
               <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
-                <i data-feather="chevron-right" class="text-button_bold"></i>
+                <i data-feather="arrow-right-circle" class="text-button_bold"></i>
               </button>
             </form>
           </div>
@@ -92,4 +97,4 @@ require_once("includes/init.php");
 
 
 
-<?php require_once("includes/templates/foot.php") ?>
+<?php require_once 'includes/templates/foot.php'; ?>

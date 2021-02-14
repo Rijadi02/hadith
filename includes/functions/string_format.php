@@ -39,7 +39,18 @@ function al_hadith_split($hadith, $class)
     $hadith = str_replace($text, '', $hadith);
 
     //$list = ["transmeton se", "tha:", "tregon se", "transmeton:", "tregon:", "rrëfen:"];
-    $list = ['transmeton se ', ': ', 'tregon se ', 'tregon se,', 'transmeton se,', 'rrëfen se ', 'rrëfen se,', 'rrëfen'];
+    $list = [
+        'transmeton se ',
+        ': ',
+        'tregon se ',
+        'tregon se,',
+        'transmeton se,',
+        'rrëfen se ',
+        'rrëfen se,',
+        'rrëfen ',
+        'thënë se,',
+        'thënë se ',
+    ];
 
     $mylist = [];
 
@@ -51,7 +62,11 @@ function al_hadith_split($hadith, $class)
     $del = array_keys($mylist, min($mylist))[0];
 
     if (substr($hadith, 0, 3) == '<p>') {
-        $hadith = str_replace_first('<p>', "<p class=\"$class\" id=\"$class\"> ", $hadith);
+        $hadith = str_replace_first(
+            '<p>',
+            "<p class=\"$class\" id=\"$class\"> ",
+            $hadith
+        );
         $narrator = explode($del, $hadith)[0] . $del;
         $narrator_div =
             substr($narrator, -2) == ': '
@@ -59,9 +74,13 @@ function al_hadith_split($hadith, $class)
                 : substr($narrator, 0, -1) . ':</p>';
     } else {
         $narrator = explode($del, $hadith)[0] . $del;
-        $narrator_div = "<p class=\"$class\" id=\"$class\">" . ucfirst($narrator) . '</p>';
+        $narrator_div =
+            "<p class=\"$class\" id=\"$class\">" . ucfirst($narrator) . '</p>';
     }
-    $return_str = str_replace_first($narrator, $narrator_div, $hadith);
+
+    $after = explode($del, $hadith)[1];
+    $return_str = str_replace_first($after, ucfirst(ltrim($after)), $hadith);
+    $return_str = str_replace_first($narrator, $narrator_div, $return_str);
     // echo "<script>console.log('$return_str')</script>";
 
     return $return_str;

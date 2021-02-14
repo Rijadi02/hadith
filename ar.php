@@ -27,10 +27,13 @@
                 <i data-feather="camera" class="text-button"></i>
               </button>
               <span class="text-button_light">|</span>
+              <button class="btn py-2 " type='button' id='but_copy' onclick="copy_link('al')" value='Copy' style="font-size: 20px; border: none;">
+                <i data-feather="share-2" class="text-button"></i>
+              </button>
+              <span class="text-button_light">|</span>
               <button class="btn py-2 " type='button' id='but_copy' onclick="copy()" value='Copy' style="font-size: 20px; border: none;">
                 <i data-feather="clipboard" class="text-button"></i>
               </button>
-
 
             </div>
 
@@ -57,15 +60,19 @@
           <div class="bottom-area">
             <form method="POST" action="" class="screenshot border-0 remove pt-3">
               <button class="btn m-0" type='submit' id='but_back' name="back" value='Back' style="width: 60px; font-size: 20px;">
-                <i data-feather="chevron-left" class="text-button_bold"></i>
+                <i data-feather="arrow-left-circle" class="text-button_bold"></i>
               </button>
               <!-- <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
               <button class="btn" type='submit' id='but_res' name="next" value='Reset' style="width: 60px; font-size: 20px">
                  <i data-feather="repeat" class="text-button_bold"></i>
               </button> -->
-              <span style="padding: 5px 0 0 0;" class="text-button_light">|</span>
+              <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
+              <a class="btn" href="." style="width: 60px; font-size: 20px">
+                <i data-feather="home" class="text-button_bold"></i>
+              </a>
+              <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
               <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">
-                <i data-feather="chevron-right" class="text-button_bold"></i>
+                <i data-feather="arrow-right-circle" class="text-button_bold"></i>
               </button>
             </form>
           </div>
