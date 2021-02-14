@@ -4,26 +4,26 @@ a {
   &:hover {
     color: white;
   }
+}
 
-  &-title {
-    font-family: Avenir;
-    font-weight: 300;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+.a-title {
+  font-family: Avenir;
+  font-weight: 300;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
 
-    &:hover {
-      color: black;
-      background-color: white;
-      text-decoration: none;
-      padding: 10px 30px;
-    }
+  &:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px 30px;
   }
+}
 
-  &-mobile {
-    &:active {
-      color: black;
-      background-color: white;
-      padding: 20px 20px;
-    }
+.a-mobile {
+  &:active {
+    color: black;
+    background-color: white;
+    padding: 20px 20px;
   }
 }
 

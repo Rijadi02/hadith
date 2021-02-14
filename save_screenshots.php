@@ -2,12 +2,19 @@
 
 <?php
 
+if(isset($_GET["unset"]))
+{
+  session_start();
+  unset($_SESSION['save_id']);
+  echo "unset";
+  exit();
+}
+
 require_once("includes/init_head.php");
 require_once "includes/templates/head.php";
 
-
 $id = isset($_SESSION['save_id']) ? $_SESSION['save_id'] : 1 ;
- 
+  
 $hadith = Hadiths::find_by_id($id);
 $_SESSION['save_id'] = $id + 1;
 if(!isset($hadith->text_al))
@@ -18,6 +25,7 @@ if(!isset($hadith->text_al))
 $fileList = glob('assets/img/backgrounds/*');
 $random = array_rand($fileList);
 $img = $fileList[$random];
+
 ?>
 
 
@@ -146,7 +154,7 @@ function save_screenshot(){
       });
     }
 
-    setTimeout(save_screenshot, 1500);
+    setTimeout(save_screenshot, 1200);
 </script>
 
 <?php require_once("includes/templates/foot.php") ?>

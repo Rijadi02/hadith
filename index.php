@@ -79,7 +79,7 @@ if ( window.history.replaceState ) {
                                     </div>
 
                                     <!-- <div class="col-lg-12 mobileShow">
-                                        <p class="page-header-text">If you want to get a hadeeth per day in you email, put your email down there!</p>
+                                        <p class="page-header-text">If you want to get a hadith per day in you email, put your email down there!</p>
                                         <div id="WRAPPER">
                                             <form class="border-0" onsubmit="showModal()" action="javascript:void(0)" method="POST" style="display: inline;">
                                                 <div class="term">
@@ -93,7 +93,7 @@ if ( window.history.replaceState ) {
 
                                     <div class="col-lg-12">
 
-                                        <p class="page-header-text">If you want to get a hadeeth per day in you email, put your email down there!</p>
+                                        <p class="page-header-text">If you want to get a hadith per day in you email, put your email down there!</p>
                                         <div id="WRAPPER">
                                             <form class="border-0" onsubmit="showModal()" action="javascript:void(0)" method="POST" style="display: inline;">
                                                 <div class="term">
@@ -152,17 +152,17 @@ if ( window.history.replaceState ) {
 
                                 </div>
                                 <div class="row pb-5">
-                                    <p class="page-header-text">The ahadeeth that are shown on this page are taken from <a href="http://www.buhariu.com">bukhariu.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
+                                    <p class="page-header-text">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
                                     <div class="py-2 d-sm-none">&nbsp;</div>
 
                                     <div class="col-lg-4 ">
-                                        <a href="#" class="page-header-text">@onehadeeth.org<i class="fab fa-instagram " style="width:50px;"></i></a>
+                                        <a href="#" class="page-header-text">@onehadith.org<i class="fab fa-instagram " style="width:50px;"></i></a>
                                     </div>
                                     <div class="col-lg-4">
-                                        <a href="#" class="page-header-text">@onehadeeth.org<i class="fab fa-facebook" style="width:50px;"></i></a>
+                                        <a href="#" class="page-header-text">@onehadith.org<i class="fab fa-facebook" style="width:50px;"></i></a>
                                     </div>
                                     <div class="col-lg-4">
-                                        <a href="#" class="page-header-text"> One Hadeeth Org <i class="fab fa-twitter" style="width:50px;"></i></a>
+                                        <a href="#" class="page-header-text"> One hadith Org <i class="fab fa-twitter" style="width:50px;"></i></a>
                                     </div>
                                 </div>
 

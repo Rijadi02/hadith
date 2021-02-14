@@ -46,22 +46,22 @@ require_once 'includes/init.php';
 
           </div>
 
- 
+
 
           <div class="center-area">
-           
 
-              <div id="hadith" class="hadith"><?php echo al_hadith_split(
-                  $hadith->text_al,
-                  'narrator'
-              ); ?></div>
-              <div>
-                <div id="grade" class="grade">(<?php echo $hadith->grade_al; ?>, <?php echo $hadith->hadith_no; ?>)</div>
-                <!-- <div id="book" class="book">
+
+            <div id="hadith" class="hadith"><?php echo al_hadith_split(
+                                              $hadith->text_al,
+                                              'narrator'
+                                            ); ?></div>
+            <div>
+              <div id="grade" class="grade">(<?php echo $hadith->grade_al; ?>, <?php echo $hadith->hadith_no; ?>)</div>
+              <!-- <div id="book" class="book">
                   <?php echo $hadith->book_str('al'); ?>
                 </div> -->
-              </div>
-           
+            </div>
+
           </div>
 
           <div class="bottom-area">
@@ -75,7 +75,7 @@ require_once 'includes/init.php';
               </button> -->
               <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
               <a class="btn" href="." style="width: 60px; font-size: 20px">
-                 <i data-feather="home" class="text-button_bold"></i>
+                <i data-feather="home" class="text-button_bold"></i>
               </a>
               <span style="padding: 7px 0 0 0;" class="text-button_light">|</span>
               <button class="btn m-0" type='submit' id='but_next' name="next" value='Next' style="width: 60px; font-size:20px">

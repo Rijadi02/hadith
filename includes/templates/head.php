@@ -17,13 +17,8 @@
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
   <link href="assets/font/stylesheet.css" rel="stylesheet">
   <link href="assets/font/kitab/stylesheet.css" rel="stylesheet">
-  
-  <link href="assets/css/mystyle.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  <link rel="stylesheet" href="assets/css/form.css">
-  <link rel="stylesheet" href="assets/css/hadith.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/text.css">
+
+  <link rel="stylesheet" href="assets/css/main.min.css">
   
   <html prefix="og: https://ogp.me/ns#">
   <?php if(isset($_GET['hadith'])) : ?>

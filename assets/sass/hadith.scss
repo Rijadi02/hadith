@@ -1,6 +1,8 @@
+@import "variables.scss";
+
 .narrator {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: $secondary_color;
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -9,7 +11,7 @@
 .hadith {
   font-size: 2rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: $primary_color;
 }
 
 .hadith-ar {
@@ -31,7 +33,7 @@
 
 .grade {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: $secondary_color;
   font-weight: 300;
   float: right;
   padding-right: 20px;
@@ -39,7 +41,7 @@
 
 .book {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: $secondary_color;
   font-weight: 300;
   float: left;
 }
@@ -53,7 +55,7 @@
 @media only screen and (min-device-width : 120px) and (max-device-width : 480px) {
   .narrator {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
+    color: $secondary_color;
     font-weight: 200;
 
   }
@@ -61,19 +63,19 @@
   .hadith {
     font-size: 20px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
+    color: $primary_color;
   }
 
   .grade {
     font-size: 16px;
     font-weight: 200;
-    color: rgba(255, 255, 255, 0.8);
+    color: $secondary_color;
 
   }
 
   .book {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
+    color: $secondary_color;
     font-weight: 200;
   }
 }
