@@ -10,6 +10,7 @@ class Timings extends Db_object
     public $month;
     public $day;
     public $imsak;
+    public $sunrise;
     public $dhuhr;
     public $asr;
     public $maghrib;
