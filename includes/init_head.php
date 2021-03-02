@@ -14,6 +14,7 @@ require_once "models/collections.php";
 require_once "models/books.php";
 require_once "models/hadiths.php";
 require_once "models/selected.php";
+require_once "models/timings.php";
 
 
 

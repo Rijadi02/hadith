@@ -44,12 +44,24 @@ if(isset($_GET['lan'])){
         }
 
 
-$array["image"] = substr($img,2);
+        $array["image"] = substr($img,2);
+
+        if(isset($_GET['timestamp']) && isset($_GET['country'])){
+                $hadith = $array;
+                $timings = Timings::get_timestamp($_GET['timestamp'], $_GET['country']);
+                
+                $array = [
+                        "hadith" => $hadith,
+                        "timings" => $timings
+                ];
+        }
 }
 else
 {
         $array = ["error" => "language not specified!"];   
 }
+
+
 
 
 echo json_encode($array);

@@ -50,6 +50,7 @@ function al_hadith_split($hadith, $class)
         'rrëfen ',
         'thënë se,',
         'thënë se ',
+        'thënë:,',
     ];
 
     $mylist = [];
