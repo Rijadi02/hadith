@@ -34,7 +34,7 @@ class Hadiths extends Db_object
         $the_result_array = self::find_by_query(
             'SELECT * FROM ' .
                 self::$db_table .
-                " WHERE LENGTH(text_$lan) > 24 ORDER BY RAND() LIMIT 1;"
+                " WHERE LENGTH(text_$lan) > 24 AND LENGTH(text_$lan) < 1400 AND selected = 1 ORDER BY RAND() LIMIT 1;"
         );
         return !empty($the_result_array)
             ? array_shift($the_result_array)

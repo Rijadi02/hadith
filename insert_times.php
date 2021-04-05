@@ -1,7 +1,7 @@
 <?php
 require_once("includes/init.php");
 
-$strJsonFileContents = file_get_contents("xktimes.json");
+$strJsonFileContents = file_get_contents("altimes.json");
 
 $array = json_decode($strJsonFileContents, true);
 
@@ -17,14 +17,17 @@ foreach($array as $time){
     // "Akshami": "16:16",
     // "Jacia": "17:55",
 
-    $insert->month = $time['Muaji'];
-    $insert->day = $time['Data'];
-    $insert->imsak = $time['Imsaku'];
-    $insert->sunrise = $time['Lindja e Diellit'];
-    $insert->dhuhr = $time['Dreka'];
-    $insert->asr = $time['Ikindia'];
-    $insert->maghrib = $time['Akshami'];
-    $insert->isha = $time['Jacia'];
+
+    $insert->month = $time['month'];
+    $insert->day = $time['day'];
+    $insert->country = "al";
+
+    $insert->imsak = $time['imsak'];
+    $insert->sunrise = $time['sunrise'];
+    $insert->dhuhr = $time['dhuhr'];
+    $insert->asr = $time['dhuhr'];
+    $insert->maghrib = $time['maghrib'];
+    $insert->isha = $time['isha'];
 
     $insert->save();
 
