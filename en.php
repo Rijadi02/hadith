@@ -12,7 +12,7 @@ require_once("includes/init.php");
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  header("Access-Control-Allow-Credentials: true");
+  header("Access-Control-Allow-Origin: *");
 
   function copy() {
     var $temp = $("<textarea>");
