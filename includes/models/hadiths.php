@@ -11,7 +11,8 @@ class Hadiths extends Db_object
         'collection',
         'text_en',
         'text_ar',
-        'text_al'
+        'text_al',
+        'selected'
     ];
 
     public $id;
@@ -22,6 +23,7 @@ class Hadiths extends Db_object
     public $text_en;
     public $text_ar;
     public $text_al;
+    public $selected;
 
     public static function get_random($lan = 'en')
     {

@@ -98,7 +98,7 @@ function capFL(string) {
     var $temp = $("<textarea>");
     $("body").append($temp);    
 
-    $temp.val("http://onehadith.org/" + folder + "?hadith=<?php echo $hadith->collection; echo "_"; echo $hadith->hadith_no; ?>").select();
+    $temp.val("https://onehadith.org/" + folder + "?hadith=<?php echo $hadith->collection; echo "_"; echo $hadith->hadith_no; ?>").select();
     document.execCommand("copy");
     $temp.remove();
     alert("Link copied to clipboard!")

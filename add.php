@@ -11,29 +11,40 @@ if(isset($_POST['submit'])){
     $request = sunnah_hadith_request($collection, $_POST['nr']);
     $request = json_decode($request);
 
-    print_r($request);
-    exit();
-
+    
     $hadith = new Hadiths();
     $hadith->collection = $collection;
     $hadith->hadith_no = $_POST['nr'];
-    $hadith->chapter_no = $request->hadith[0]->chapterNumber;
-    $hadith->book_no = $request->bookNumber;
-    $hadith->text_en = $request->hadith[0]->body;
-    $hadith->text_ar = $request->hadith[1]->body;
-    $hadith->text_al = $_POST["hadith"];
+    $hadith->chapter_no = $_POST["nr"];
+    $hadith->book_no = 1;
+    $hadith->text_en = "<p>" . $_POST["ennarr"] . "</p>";
+    $hadith->text_en .= "<p>" . $_POST["hadithen"] . "</p>";
+    $hadith->text_ar = "</span>" . $_POST["hadithar"];
+    $hadith->text_al = $_POST["hadithal"];
     $hadith->selected = 1;
 
     $hadith->save();
-    echo "hadithi u rujt";
+    echo '<a href="http://localhost/hadith_new/en?hadith=nawawi40_'.$_POST['nr'].'">en </a>';
+    echo '<a href="http://localhost/hadith_new/al?hadith=nawawi40_'.$_POST['nr'].'">al </a>';
+    echo '<a href="http://localhost/hadith_new/ar?hadith=nawawi40_'.$_POST['nr'].'">ar </a>';
 
 }
 
 ?>
 <form method="POST">
 <label>nr</label><br>
-<input style="width: 60%;" required name="nr" type="number"><br><br>
-<label>hadith<label><br>
-<textarea style="width: 60%;" required rows="20" name="hadith" type="text"> </textarea><br><br>
+<input style="width: 60%;" required name="nr" type="number"><br><br><br>
+
+<label>albanian<label><br>
+<textarea style="width: 60%;" required rows="12" name="hadithal" type="text"></textarea><br><br><br>
+
+<label>english narrator<label><br>
+<textarea style="width: 60%;" required rows="2" name="ennarr" type="text"></textarea><br>
+<label>english<label><br>
+<textarea style="width: 60%;" required rows="12" name="hadithen" type="text"></textarea><br><br><br>
+
+<label>arabic<label><br>
+<textarea style="width: 60%;" required rows="12" name="hadithar" type="text"></textarea><br><br>
+
 <input type="submit" name="submit" value="submit"/><br>
 </form>

@@ -1,7 +1,7 @@
 <?php
 require_once("includes/init.php");
-
-$strJsonFileContents = file_get_contents("altimes.json");
+exit();
+$strJsonFileContents = file_get_contents("times/mktimes.json");
 
 $array = json_decode($strJsonFileContents, true);
 
@@ -20,7 +20,7 @@ foreach($array as $time){
 
     $insert->month = $time['month'];
     $insert->day = $time['day'];
-    $insert->country = "al";
+    $insert->country = "mk";
 
     $insert->imsak = $time['imsak'];
     $insert->sunrise = $time['sunrise'];
