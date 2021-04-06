@@ -45,7 +45,7 @@ if (isset($_POST['type'])) {
 
 
                                     <div class="col-lg-12">
-                                        <p class="page-header-text w-100 text-white"><b>Don't forget to keep us on your duas. 🤲</b></p>
+                                        <p class="page-header-text w-100 text-white"><b>Don't forget to keep us in your duas. 🤲</b></p>
                                         <p class="page-header-text">We also have an extension for showing prayer times and a random hadith for each new tab.
 
                                             <a href="https://chrome.google.com/webstore/detail/one-hadith/kjkmpppbjhcllohbcjeclghdfhbcnkfa">Download our extension!</a>
