@@ -22,9 +22,6 @@ if(isset($_POST['submit'])){
     $hadith->text_en = $request->hadith[0]->body;
     $hadith->text_ar = $request->hadith[1]->body;
     $hadith->text_al = $_POST["hadith"];
-    $hadith->grade_en = grade_join($request->hadith[0]->grades);
-    $hadith->grade_al = grade_join($request->hadith[0]->grades);
-    $hadith->grade_ar = grade_join($request->hadith[1]->grades);
     $hadith->selected = 1;
 
     $hadith->save();

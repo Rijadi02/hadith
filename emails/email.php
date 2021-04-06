@@ -38,17 +38,17 @@ function send_email($emails, $type, $hadith)
         case "en":
             $message = str_replace('%hadith%', hadith_split($hadith->text_en, "narrator") , $message);
             $message = str_replace('%book%', $hadith->book_str("en") , $message);
-            $message = str_replace('%grade%', $hadith->grade_en , $message);
+            $message = str_replace('%grade%', $hadith->get_collection()->collection_en , $message);
             $message = str_replace('%text%', "Go to Hadith" , $message);
         case "ar":
             $message = str_replace('%hadith%', ar_hadith_split($hadith->text_ar, "narrator") , $message);
             $message = str_replace('%book%', $hadith->book_str("ar") , $message);
-            $message = str_replace('%grade%', $hadith->grade_ar , $message);
+            $message = str_replace('%grade%', $hadith->get_collection()->collection_ar , $message);
             $message = str_replace('%text%', "Go to Hadith" , $message);
         case "al":
             $message = str_replace('%hadith%', al_hadith_split($hadith->text_al, "narrator") , $message);
             $message = str_replace('%book%', $hadith->book_str("al") , $message);
-            $message = str_replace('%grade%', $hadith->grade_al , $message);
+            $message = str_replace('%grade%', $hadith->get_collection()->collection_al , $message);
             $message = str_replace('%text%', "Go to Hadith" , $message);
     }
 

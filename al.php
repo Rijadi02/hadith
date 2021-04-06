@@ -56,7 +56,7 @@ require_once 'includes/init.php';
                                               'narrator'
                                             ); ?></div>
             <div>
-              <div id="grade" class="grade">(<?php echo $hadith->grade_al; ?>, <?php echo $hadith->hadith_no; ?>)</div>
+              <div id="grade" class="grade">(<?php echo $hadith->get_collection()->collection_al; ?>, <?php echo $hadith->hadith_no; ?>)</div>
               <!-- <div id="book" class="book">
                   <?php echo $hadith->book_str('al'); ?>
                 </div> -->

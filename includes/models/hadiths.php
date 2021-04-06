@@ -11,10 +11,7 @@ class Hadiths extends Db_object
         'collection',
         'text_en',
         'text_ar',
-        'text_al',
-        'grade_en',
-        'grade_ar',
-        'grade_al',
+        'text_al'
     ];
 
     public $id;
@@ -25,9 +22,6 @@ class Hadiths extends Db_object
     public $text_en;
     public $text_ar;
     public $text_al;
-    public $grade_en;
-    public $grade_ar;
-    public $grade_al;
 
     public static function get_random($lan = 'en')
     {
@@ -53,6 +47,10 @@ class Hadiths extends Db_object
     public function get_book()
     {
         return Books::find_by_no($this->collection, $this->book_no);
+    }
+
+    public function get_collection(){
+        return Collections::find_by_name($this->collection);
     }
 
     public function get_by_id($id)

@@ -46,9 +46,6 @@ if (isset($_POST['accept'])) {
         $hadith->text_en = $request->hadith[0]->body;
         $hadith->text_ar = $al_request[0]->ar->text;
         $hadith->text_al = $al_request[0]->translations->sq->text;
-        $hadith->grade_en = grade_join($request->hadith[0]->grades);
-        $hadith->grade_al = grade_join($request->hadith[0]->grades);
-        $hadith->grade_ar = grade_join($request->hadith[1]->grades);
 
         $hadith->save();
     } else {

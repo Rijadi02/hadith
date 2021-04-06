@@ -27,7 +27,7 @@
                 <i data-feather="camera" class="text-button"></i>
               </button>
               <span class="text-button_light">|</span>
-              <button class="btn py-2 " type='button' id='but_copy' onclick="copy_link('al')" value='Copy' style="font-size: 20px; border: none;">
+              <button class="btn py-2 " type='button' id='but_copy' onclick="copy_link('ar')" value='Copy' style="font-size: 20px; border: none;">
                 <i data-feather="share-2" class="text-button"></i>
               </button>
               <span class="text-button_light">|</span>
@@ -49,7 +49,7 @@
                                                         'narrator'
                                                       ); ?></div>
             <div>
-              <div id="grade" class="grade">(<?php echo $hadith->grade_ar; ?>, <?php echo $hadith->hadith_no; ?>)</div>
+              <div id="grade" class="grade">(<?php echo $hadith->get_collection()->collection_ar; ?>, <?php echo $hadith->hadith_no; ?>)</div>
               <!-- <div id="book" class="book">
                 <?php echo $hadith->book_str('ar'); ?>
                 </div> -->
