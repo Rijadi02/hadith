@@ -1,7 +1,7 @@
 <link href="assets/css/styles.css" rel="stylesheet" />
 
 <?php
-require_once("includes/init.php");
+require_once 'includes/init.php';
 
 if (isset($_POST['type'])) {
     $email = htmlspecialchars($_POST['email']);
@@ -11,19 +11,16 @@ if (isset($_POST['type'])) {
         $email_object->email = $email;
         $email_object->type = $type;
         $email_object->save();
-        message("Email registred!");
+        message('Email registred!');
+    } else {
+        message('Email already exists!', 'danger');
     }
-    else
-    {
-        message("Email already exists!", "danger");
-    } 
 }
 ?>
 <script>
-
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
 </script>
 
 
@@ -39,69 +36,21 @@ if ( window.history.replaceState ) {
                 flex-direction: column;">
                 <div style="z-index: 100;" class="container">
                     <div class="row justify-content-center">
-                        <div class="col-xl-8 col-lg-10 text-center">
+                        <div class="col-lg-10 text-center">
                             <div data-aos="fade-up">
                                 <div class="row pt-5">
 
 
-                                    <script>
-                                        function showModal() {
-                                            document.getElementById("modal-type").style.display = "block";
-                                            document.getElementById("email").value = document.getElementById("emailold").value;
-                                        }
 
-                                        function closeModal() {
-                                            document.getElementById("modal-type").style.display = "none";
-                                            document.getElementById("email").value = "";
-                                        }
-
-                                        function submitType(type) {
-                                            console.log(document.getElementById("email").value);
-                                            document.getElementById("type").value = type;
-                                            document.getElementById("formType").submit();
-                                        }
-                                    </script>
-
-                                    <div id="modal-type" class="message" onclick="closeModal()" style="display:none">
-                                        <div class="message-text text-center text-<?php echo $msg_type; ?>">
-                                            <button class="btn" style="font-size: 1rem; color:white; opacity:0.7" href=".">
-                                                < Back</button> <br>
-                                                    <button class="btn" onclick="submitType('al')" style="font-size: 2rem;color:white;">Albanian</button>
-                                                    <br>
-                                                    <button class="btn" onclick="submitType('en')" style="font-size: 2rem;color:white;">English</button>
-                                                    <br>
-                                                    <button class="btn" onclick="submitType('ar')" style="font-size: 2rem;color:white;">Arabic</button>
-                                        </div>
-                                        <form id="formType" action="" method="POST" style="display:none">
-                                            <input id="type" type="text" hidden name="type">
-                                            <input id="email" type="text" hidden name="email">
-                                        </form>
-                                    </div>
-
-                                    <!-- <div class="col-lg-12 mobileShow">
-                                        <p class="page-header-text">If you want to get a hadith per day in you email, put your email down there!</p>
-                                        <div id="WRAPPER">
-                                            <form class="border-0" onsubmit="showModal()" action="javascript:void(0)" method="POST" style="display: inline;">
-                                                <div class="term">
-                                                    <input type="email" required id="emailold" placeholder="Email here!" style="width:80%;border-bottom: 1px solid white;background-color:transparent">
-                                                    <button id="button-transparent" type="submit" name="submit-email" style="border-bottom: 1px solid white"><i class="fa fa-arrow-right"></i></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div> -->
 
 
                                     <div class="col-lg-12">
+                                        <p class="page-header-text w-100 text-white"><b>Don't forget to keep us on your duas. 🤲</b></p>
+                                        <p class="page-header-text">We also have an extension for showing prayer times and a random hadith for each new tab.
 
-                                        <p class="page-header-text">If you want to get a hadith per day in you email, put your email down there!</p>
-                                        <div id="WRAPPER">
-                                            <form class="border-0" onsubmit="showModal()" action="javascript:void(0)" method="POST" style="display: inline;">
-                                                <div class="term">
-                                                    <input type="email" class="email-input" required id="emailold" placeholder="Email here!">
-                                                    <button id="button-transparent" type="submit" name="submit-email" style="border-bottom: 1px solid white"><i class="fa fa-arrow-right"></i></button>
-                                                </div>
-                                            </form>
-                                        </div>
+                                            <a href="https://chrome.google.com/webstore/detail/one-hadith/kjkmpppbjhcllohbcjeclghdfhbcnkfa">Download our extension!</a>
+                                        </p>
+
 
                                     </div>
 
@@ -151,28 +100,38 @@ if ( window.history.replaceState ) {
                                     </div>
 
                                 </div>
-                                <div class="row pb-5">
-                                    <p class="page-header-text">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
-                                    <div class="py-2 d-sm-none">&nbsp;</div>
+                                <div class="row text-center">
+                                    <p class="page-header-text pb-4 w-100">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
 
-                                    <div class="col-lg-4 ">
-                                        <a href="#" class="page-header-text">@onehadith.org<i class="fab fa-instagram " style="width:50px;"></i></a>
+                                    <div class="py-5 d-sm-none">&nbsp;</div>
+
+                                    <div class="col-lg-3 ">
+                                        <a href="https://www.youtube.com/channel/UC5kaiIEUKKHmGyQ08WITvew" class="page-header-text text-center">
+                                            <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="youtube"></i>
+                                            <br>Muslimani Ideal
+                                        </a>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <a href="#" class="page-header-text">@onehadith.org<i class="fab fa-facebook" style="width:50px;"></i></a>
+                                    <div class="col-lg-3 ">
+                                        <a href="https://www.facebook.com/MuslimaniIdealM" class="page-header-text text-center">
+                                            <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="facebook"></i>
+                                            <br>@MuslimaniIdealM
+                                        </a>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <a href="#" class="page-header-text"> One hadith Org <i class="fab fa-twitter" style="width:50px;"></i></a>
+                                    <div class="col-lg-3">
+                                        <a href="https://www.instagram.com/muslimani_ideal/" class="page-header-text text-center">
+                                            <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="instagram"></i>
+                                            <br>@muslimani_ideal
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a href="https://t.me/muslimani_ideal" class="page-header-text text-center">
+                                            <image style="margin-bottom: .92rem; width: 1.5rem" src="./assets/svg/telegram.svg" alt=""></image>
+                                            <br>Muslimani Ideal
+                                        </a>
                                     </div>
                                 </div>
 
 
-                                <!-- <form class="" style="padding: 0px; width: 40%; bottom:10px ; right: -15%; ; z-index: 1; position: absolute; border: none;">
-                                        <div style="position: relative; width: 60%;">
-                                            <input type="text" class="form-control" style="border-radius: 20px;">
-                                            <button class="btn btn-primary" style="border-radius: 20px; position: absolute; top: 0; right: 0;">hello</button>
-                                        </div>
-                                    </form> -->
 
                             </div>
 
@@ -185,4 +144,4 @@ if ( window.history.replaceState ) {
 </div>
 
 
-<?php require_once("includes/templates/foot.php") ?>
+<?php require_once 'includes/templates/foot.php'; ?>
