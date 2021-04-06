@@ -103,33 +103,35 @@ if (isset($_POST['type'])) {
                                 <div class="row text-center">
                                     <p class="page-header-text pb-4 w-100">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
 
-                                    <div class="py-5 d-sm-none">&nbsp;</div>
+                                    <div class="py-sm-5 d-sm-none">&nbsp;</div>
 
-                                    <div class="col-lg-3 ">
+                                    <div class="col-lg-3 py-1">
                                         <a href="https://www.youtube.com/channel/UC5kaiIEUKKHmGyQ08WITvew" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="youtube"></i>
-                                            <br>Muslimani Ideal
+                                            <div style="display: inline-block;" class="text-center"> &nbsp; Muslimani Ideal &nbsp; </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 ">
+                                    <div class="col-lg-3 py-1">
                                         <a href="https://www.facebook.com/MuslimaniIdealM" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="facebook"></i>
-                                            <br>@MuslimaniIdealM
+                                            <div style="display: inline-block;" class="text-center"> &nbsp; @MuslimaniIdealM &nbsp; </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 py-1">
                                         <a href="https://www.instagram.com/muslimani_ideal/" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="instagram"></i>
-                                            <br>@muslimani_ideal
+                                            <div style="display: inline-block;" class="text-center"> &nbsp; @muslimani_ideal &nbsp; </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 py-1">
                                         <a href="https://t.me/muslimani_ideal" class="page-header-text text-center">
                                             <image style="margin-bottom: .92rem; width: 1.5rem" src="./assets/svg/telegram.svg" alt=""></image>
-                                            <br>Muslimani Ideal
+                                            <div style="display: inline-block;" class="text-center"> &nbsp; Muslimani Ideal &nbsp; </div>
                                         </a>
                                     </div>
+                                <div class="py-2">&nbsp;</div>
                                 </div>
+
 
 
 
