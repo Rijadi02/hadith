@@ -17,7 +17,7 @@ require_once 'includes/init.php';
 
 
 
-<body class="df">
+
 <div id="body" class="df">
   <div id="main" class="w-100 page-header overlay my-0 py-0 bg-img-cover df"  style='background-image: url("<?php echo $img; ?>")'>
     <div class="page-header-content fade-up df">
