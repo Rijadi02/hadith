@@ -72,6 +72,7 @@ body {
     flex-flow: column;
     justify-content: space-between;
     min-height: 100%;
+    flex: 1;
 }
 .top-area{
     display: inline-block;
@@ -86,4 +87,8 @@ body {
     display: inline-block;
     margin: 0 auto;
     padding: 1rem 0;
+}
+.df{
+    display: flex;
+    flex: 1;
 }

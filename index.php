@@ -108,25 +108,25 @@ if (isset($_POST['type'])) {
                                     <div class="col-lg-3 py-1">
                                         <a href="https://www.youtube.com/channel/UC5kaiIEUKKHmGyQ08WITvew" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="youtube"></i>
-                                            <div style="display: inline-block;" class="text-center"> &nbsp; Muslimani Ideal &nbsp; </div>
+                                            <div class="text-center mobile-inline"> Muslimani Ideal </div>
                                         </a>
                                     </div>
                                     <div class="col-lg-3 py-1">
                                         <a href="https://www.facebook.com/MuslimaniIdealM" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="facebook"></i>
-                                            <div style="display: inline-block;" class="text-center"> &nbsp; @MuslimaniIdealM &nbsp; </div>
+                                            <div class="text-center mobile-inline"> @MuslimaniIdealM </div>
                                         </a>
                                     </div>
                                     <div class="col-lg-3 py-1">
                                         <a href="https://www.instagram.com/muslimani_ideal/" class="page-header-text text-center">
                                             <i style="width: 1.5rem;height: 1.5rem; margin-bottom: .7rem;" data-feather="instagram"></i>
-                                            <div style="display: inline-block;" class="text-center"> &nbsp; @muslimani_ideal &nbsp; </div>
+                                            <div class="text-center mobile-inline"> @muslimani_ideal </div>
                                         </a>
                                     </div>
                                     <div class="col-lg-3 py-1">
                                         <a href="https://t.me/muslimani_ideal" class="page-header-text text-center">
                                             <image style="margin-bottom: .92rem; width: 1.5rem" src="./assets/svg/telegram.svg" alt=""></image>
-                                            <div style="display: inline-block;" class="text-center"> &nbsp; Muslimani Ideal &nbsp; </div>
+                                            <div class="text-center mobile-inline">Muslimani Ideal</div>
                                         </a>
                                     </div>
                                 <div class="py-2">&nbsp;</div>

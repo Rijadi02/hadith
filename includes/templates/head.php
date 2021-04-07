@@ -59,6 +59,15 @@
 
 </head>
 
+<style>
+  html { 
+    height:100%;
+}
+body { 
+    min-height:100%;
+}
+</style>
+
 <body>
 
   <?php if (count($_GET) > 0) : ?>
