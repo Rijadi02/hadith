@@ -47,14 +47,6 @@ if (isset($_POST['type'])) {
                                     <div class="col-lg-12">
                                         <p class="page-header-text w-100 text-white"><b>Don't forget to keep us in your duas. 🤲</b></p>
                                         <p class="page-header-text">We also have an extension for showing prayer times and a random hadith for each new tab.
-                                            <script>
-                                                if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-                                                    document.getElementById("ext-link").setAttribute('href', "https://chrome.google.com/webstore/detail/one-hadith/kjkmpppbjhcllohbcjeclghdfhbcnkfa");
-                                                }
-                                                if (typeof InstallTrigger !== 'undefined') {
-                                                    document.getElementById("ext-link").setAttribute('href', "https://addons.mozilla.org/en-US/firefox/addon/one-hadith/");
-                                                }
-                                            </script>
                                             <a id="ext-link" href="https://chrome.google.com/webstore/detail/one-hadith/kjkmpppbjhcllohbcjeclghdfhbcnkfa">Download our extension!</a>
                                         </p>
 
@@ -152,5 +144,5 @@ if (isset($_POST['type'])) {
     </div>
 </div>
 
-
+<script src="assets/js/link.js"></script>
 <?php require_once 'includes/templates/foot.php'; ?>
