@@ -22,7 +22,7 @@
   
   <html prefix="og: https://ogp.me/ns#">
   <?php if(isset($_GET['hadith'])) : ?>
-    <meta property="og:image" content="assets/screenshots/<?php echo $folder ?>/<?php echo $_GET['hadith'] ?>.png" />
+    <meta property="og:image" content="assets/img/cover.png" />
   <?php endif; ?>
 
   <script src="assets/js/feather.min.js" crossorigin="anonymous"></script>
