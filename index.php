@@ -105,7 +105,7 @@ if (isset($_POST['type'])) {
                                 </div>
                                 <div class="row text-center">
                             
-                                            <img style="margin: 0 auto" class="pb-5" width="48" height="48" src="assets/img/mi.png"/>
+                                            <img style="margin: 0 auto; width:48px; height:auto" class="pb-5"  src="assets/img/mi.png"/>
                                             <!-- <p class="page-header-text">Muslimani ideal</p> -->
                             
                                     <p class="page-header-text pb-4 w-100">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
