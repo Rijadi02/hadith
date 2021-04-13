@@ -109,7 +109,7 @@ if (isset($_POST['type'])) {
                                             <img style="margin: 0 auto; width:48px; object-fit: contain;" class="pb-5"  src="assets/img/mi.png"/>
                                             <!-- <p class="page-header-text">Muslimani ideal</p> -->
                             
-                                    <p class="page-header-text pb-4 w-100">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
+                                    <p class="page-header-text pb-4 w-100">The hadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
 
                                     <div class="py-sm-5 d-sm-none">&nbsp;</div>
 
