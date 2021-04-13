@@ -78,7 +78,7 @@ if (isset($_POST['type'])) {
 
                                 <div class="mobileShow" class="h-100">
                                     <div class="py-5">
-                                        <div class="pt-5">
+                                        <div class="pt-5 pb-4">
                                             <h1 class="page-header-title text-center">
                                                 <a href="al" class="a-mobile text-center text-decoration-none">Albanian</a>
                                                 <br>
