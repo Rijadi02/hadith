@@ -45,6 +45,7 @@ if (isset($_POST['type'])) {
 
 
                                     <div class="col-lg-12">
+                                        
                                         <p class="page-header-text w-100 text-white"><b>Don't forget to keep us in your duas</b></p>
                                         <p class="page-header-text">We also have an extension for showing prayer times and a random hadith for each new tab.
                                             <a id="ext-link"  href="https://chrome.google.com/webstore/detail/one-hadith/kjkmpppbjhcllohbcjeclghdfhbcnkfa">
@@ -63,7 +64,7 @@ if (isset($_POST['type'])) {
 
 
 
-                                <p class="page-header-title mobileHide" style="padding: 20vh 0;">
+                                <p class="page-header-title mobileHide" style="padding-top: 20vh; padding-bottom: 15vh">
                                     <a href="al" class="a-title">Albanian</a> &nbsp;
                                     |
                                     &nbsp;
@@ -77,7 +78,7 @@ if (isset($_POST['type'])) {
 
                                 <div class="mobileShow" class="h-100">
                                     <div class="py-5">
-                                        <div class="py-5">
+                                        <div class="pt-5">
                                             <h1 class="page-header-title text-center">
                                                 <a href="al" class="a-mobile text-center text-decoration-none">Albanian</a>
                                                 <br>
@@ -103,6 +104,10 @@ if (isset($_POST['type'])) {
 
                                 </div>
                                 <div class="row text-center">
+                            
+                                            <img style="margin: 0 auto" class="pb-5" width="48" src="assets/img/mi.png"/>
+                                            <!-- <p class="page-header-text">Muslimani ideal</p> -->
+                            
                                     <p class="page-header-text pb-4 w-100">The ahadith that are shown on this page are taken from <a href="http://www.hadithet.com">hadithet.com </a> and <a href="http://www.sunnah.com">sunnah.com </a> </p>
 
                                     <div class="py-sm-5 d-sm-none">&nbsp;</div>
